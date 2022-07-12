@@ -1,0 +1,52 @@
+{% extends ":front:Front.html.twig" %}
+
+{% block title %}Cover letter{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+
+
+
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-12">
+                                        {% for file in file %}
+                                            <h3> <b> Fiche de style cover letter: </b> <br>
+
+                                           
+                                                <a href="{{ asset(file.assetPath)}}">Cliquez ici pour télécharger le fichier.</a> </h3>
+                                        </p>
+
+
+
+                                        {%endfor%}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+{% endblock %}

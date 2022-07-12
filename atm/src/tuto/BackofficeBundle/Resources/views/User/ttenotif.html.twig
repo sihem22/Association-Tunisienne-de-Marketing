@@ -1,0 +1,26 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Utilisateur{% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+{% for user in users|reverse %}
+<a href="{{ path('tuto_userEval') }}"><i class="clip-notification-2"></i> l'évaluateur {{user.Nom}} {{user.Prenom}} est inscrit avec succés <br>
+{% endfor %}
+{% endblock %}

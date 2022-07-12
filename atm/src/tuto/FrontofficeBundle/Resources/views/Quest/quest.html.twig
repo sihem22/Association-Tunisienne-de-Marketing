@@ -1,0 +1,107 @@
+{% extends ":front:Front.html.twig" %}
+
+{% block title %}Evaluation{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profil.html.twig' %}
+                            {%else%}
+
+                                {% if is_granted('ROLE_CHERCH') %}
+                                    {% include ':front:ProfilChercheur.html.twig' %}
+                            {%endif%}{%endif%}
+
+                            <h1 align="left" class="icon-box-title">
+                                <b> <font color='#0d0b6f' >  Pour évaluer le papier, veuillez remplir <br><br>le formulaire suivant </font></b></h1>
+
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+<h4> <font color="red"><i class="fa fa-warning faa-flash animated"></i> 
+
+    <b>REMARQUE : Ecrire exactement le code du papier (copier-coller).</b></font></h4>
+                                       
+
+
+                                        <form method="post">
+                                            {% for question in soumission.question %}
+
+                                                {% set name="question_"~loop.index %}
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><b>{{ question.libelle}} <span class="symbol required"></span></b></h3>
+                                                                {% if question.TypeQuestion ==  "radiobox" %} 
+
+
+                                                            {% for ValeursDefault in question.ValeursDefault %}
+                                                                <div><font align="center"> <label></font><input required type="radio"  value="{{ValeursDefault.libelle }}" name="{{ name }}" />{{ ValeursDefault.libelle }}</div>
+
+                                                            {% endfor %}
+                                                        {% endif %}
+
+
+                                                        {% if question.TypeQuestion ==  "text" %}
+
+
+                                                            <div class="col-sm-12">
+                                                                <input class="form-control" id="form-field-1" type="text" placeholder="{{question.libelle}}" name="{{ name }}"/>
+                                                            </div>
+
+                                                        {% endif %}
+
+                                                        {% if question.TypeQuestion ==  "textarea" %}
+                                                            <div class="col-sm-12">
+
+                                                                <textarea required name="{{ name }}" class="autosize form-control" id="form-field-24" placeholder="{{ question.libelle}}" style="height: 69px; width: 300px; overflow: hidden; -ms-overflow-y: hidden; -ms-word-wrap: break-word; resize: horizontal;"></textarea>
+                                                            </div>
+                                                        {% endif %}
+
+
+
+                                                    </div>
+                                                </div>
+                                                <br>
+                                            {% endfor %} 
+
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <button type="submit" class="button orange glossy  btn-lg"><h3><font color="white"><b>Enregistrer</b></font></h3></button> <b><font color="red">  champ obligatoire *  </font></b>
+                                                </div></div>
+
+                                            <style>
+                                                .button.orange {
+                                                    width: 170px;
+                                                    height:70px;
+                                                    background-color: #FF4500;
+
+                                                }
+
+
+
+                                            </style>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+{% endblock %}

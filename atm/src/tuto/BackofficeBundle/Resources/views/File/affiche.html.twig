@@ -1,0 +1,111 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Fichier{% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        {% include ":back:alert.html.twig" %}
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- start: DYNAMIC TABLE PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Liste des Fichiers
+
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                
+
+                                    <th class="center"> Cover letter </th>
+                                    <th class="center"> Manuscript </th>
+                                    <th class="center"> Fiche de style présentation doctoral </th>
+                                    <th class="center"> Fiche de style présentation communication </th>
+                                    <th class="center"> Fiche de style modèle et figure </th>
+                                    <th class="center"> Fiche de style d'inscription </th>
+                                    <th class="center"> Action </th>
+                                  
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for file in file %}
+                                   
+                                        <tr>
+                                          
+                                           
+
+                                            <td class="center"> <object data="{{ asset(file.assetPath)}}"  Type="application/msword" width="25%" height="25%" >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath)}}">click here to download the PDF file.</a> </p>
+
+                                            </td>
+
+                                            <td class="center"><object data="{{ asset(file.assetPath1)}}"  Type="application/msword" width="25%" height="25%"  >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath1)}}">Cliquer ici pour téléchrger le fichier pdf</a> </p></td>
+                                            <td class="center"><object data="{{ asset(file.assetPath2)}}"  Type="application/msword" width="25%" height="25%"  >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath2)}}">Cliquer ici pour téléchrger le fichier pdf</a> </p></td>
+                                            <td class="center"><object data="{{ asset(file.assetPath3)}}"  Type="application/msword" width="25%" height="25%"  >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath3)}}">Cliquer ici pour téléchrger le fichier pdf</a> </p></td>
+                                             <td class="center"><object data="{{ asset(file.assetPath4)}}"  Type="application/msword" width="25%" height="25%"  >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath4)}}">Cliquer ici pour téléchrger le fichier pdf</a> </p></td>
+                                              <td class="center"><object data="{{ asset(file.assetPath5)}}"  Type="application/msword" width="25%" height="25%"  >
+
+                                                </object>
+                                                <p><a href="{{ asset(file.assetPath5)}}">Cliquer ici pour téléchrger le fichier pdf</a> </p></td>
+ <td class="center">
+                            
+                                <a href="{{path('tuto_file_modif',{'id':file.id})}}" class="btn btn-xs btn-teal tooltips"  data-original-title="Modifier" data-placement="top"><i class="fa fa-edit"></i></a>
+                                <a href="{{path('tuto_file_supp',{'id':file.id})}}"  class="btn btn-xs btn-bricky tooltips"  data-original-title="Supprimer" data-placement="top" onclick="javascript:return(confirm('Voulez-vous  supprimer cette ligne??'))"><i class="fa fa-times fa fa-white"></i></a>
+
+                        </td>
+
+                    </tr>
+
+                                           
+                                    {%endfor%}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- end: DYNAMIC TABLE PANEL -->
+                        </div>
+                    </div>
+                </div>
+                {% endblock  %}
+
+

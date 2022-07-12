@@ -1,0 +1,124 @@
+
+<ul class="nav nav-pills">
+    <div class="space12">
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('front_video3') }}">
+                <b>Comment faire?</b>
+            </a>
+
+        </div>
+          
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('notification_affiche1') }}">
+                <b>   Papiers Envoyés </b>
+            </a>
+
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('notification_affiche2') }}">
+                <b>   Evaluations Envoyées </b>
+            </a>
+
+        </div>
+                
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('front_type') }}">
+                <i class="fa fa-file"></i> <b>Soumettre</b>
+            </a>
+
+        </div>
+
+
+  
+        <div class="btn-group">
+                <button class="btn btn-purple dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{  path('fos_user_profile_show') }}">
+                            <h4>  <b>    Profil </b> </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{  path('fos_user_change_password') }}">
+                            <h4>    <b>   Changer mot de passe </b> </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{  path('InformationCompte') }}">
+                            <h4>   <b>     Changer vos coordonnées </b> </h4>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+ 
+</ul> 
+<style>
+    .btn{
+
+        background-color: rgba(104, 103, 152, 0.37);
+        color: #0d0b6f;
+        
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 2.42857143;
+        border-radius:200px;
+    }
+
+
+
+    .textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+        font-size: 15px;
+
+        padding: 10px 10px;
+
+        width: 650px ;
+        margin-top: 10px;
+        display: flow-root;}
+    select {
+
+        width: 300px;
+        padding: 15px;
+
+    }
+    label {
+        font-size: 15px;
+        font-family: cambria; 
+    }
+
+    .icon-box {  
+        text-align: left;
+    }    
+
+  
+    
+    .animate-if-visible, .animate-group .animate {
+
+        background-color: rgba(0, 0, 0, 0);
+
+
+        border: 1px solid black;
+
+
+    }
+
+
+
+
+
+</style>
+
+
+<hr>
+
+<div class="col-sm-4">
+    {{ render (controller('tutoFrontofficeBundle:Default:affiche')) }} 
+
+</div>

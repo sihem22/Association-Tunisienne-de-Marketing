@@ -1,0 +1,88 @@
+{% extends ":back:base.html.twig" %}
+{% block title %} Contact {% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                           <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        {% include ":back:alert.html.twig" %}
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- start: DYNAMIC TABLE PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Liste des Contactes
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#"> </a>
+                            <a class="btn btn-xs btn-link panel-expand" href="#"> <i class="fa fa-resize-full"></i> </a>
+                            <a href="#" > <span class="glyphicon glyphicon-plus" aria-hidden="true" > </span> </a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                    <th class="center">Nom </th>   
+                                    <th class="center">Prénom </th>   
+                                    <th class="center"> E-mail </th>
+                                   
+                                    <th class="center"> Commentaire</th>
+                                    <th class="center"> Etat</th>
+                                    <th class="center"> Action</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for contact in contacts %}
+                                    <tr>
+                                        <td class="center"> {{contact.nom}}</td>
+                                         <td class="center"> {{contact.prenom}}</td>
+
+                                        <td class="center">{{contact.email}}</td>
+
+                                       
+
+                                        <td class="center"> <a href="{{path('tuto_com',{'id':contact.id})}}">cliquer ici</a></td>
+                                        <td class="center">
+                                            {% if contact.etat.id == "8" %}
+                                                <button type="button" class="btn btn-success btn-xs"> message envoyé </button> {% endif %} 
+                                                {% if contact.etat.id == "1" %}
+                                                    <button type="button" class="btn btn-warning btn-xs"> {{contact.etat}} </button> {% endif %}
+                                                <td td class="center">
+
+                                                    <a href="{{path('tuto_sendmail',{'id':contact.id})}}" class="btn btn-xs btn-teal tooltips"  data-original-title="Envoyer un Email" data-placement="top"><i class="fa fa-edit"></i></a>
+
+                                        <a href="{{path('tuto_contact_supp',{'id':contact.id})}}"  class="btn btn-xs btn-bricky tooltips"  data-original-title="Supprimer" data-placement="top" onclick="javascript:return(confirm('Voulez-vous  supprimer cette ligne??'))"><i class="fa fa-times fa fa-white"></i></a>
+                                                </td>
+                                        </tr>
+                                        {%endfor%}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end: DYNAMIC TABLE PANEL -->
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock  %}

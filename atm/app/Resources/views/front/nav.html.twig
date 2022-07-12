@@ -1,0 +1,284 @@
+<div role="navigation" class="navbar navbar-default navbar-fixed-top space-top">
+    <!-- start: TOP NAVIGATION CONTAINER -->
+    <div class="container">
+        <div class="navbar-header">
+            <!-- start: RESPONSIVE MENU TOGGLER -->
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- end: RESPONSIVE MENU TOGGLER -->
+            <!-- start: LOGO -->
+            <a class="navbar-brand" href="{{path('tuto_frontoffice_homepage')}}">
+                <img style="width:260px; "  alt="" src="{{ asset('front/images/logo1.png') }}">
+            </a>
+            <style>
+                .navbar-brand{
+                    margin-left:-92px !important;
+                }</style>
+            <!-- end: LOGO -->
+        </div>
+        <div class="navbar-collapse collapse">
+            <style>
+                .navbar-collapse {
+                    margin-right:-90px !important;
+
+                }</style>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+
+                    <a href="{{  path('tuto_frontoffice_homepage') }}">
+
+                        <strong style="color:#080e5a;font-family: cambria;font-size:170%;"><b> Acceuil</b></strong>
+                    </a>
+                </li>
+
+                <style>
+                    .badge {
+                        background-color: #34356d;}
+
+                </style>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                        <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Colloque </strong><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="{{  path('front_colloque') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Colloque ATM</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{  path('front_atelierdoc') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Atelier Doctoral</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="{{  path('tuto_affiche') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:170%;"> Colloques précedents</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:170%;">  Programme</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="{{  path('front_hotel') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Hôtel et inscription  </strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="{{  path('front_contact') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Contactez-nous  </strong>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                        <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Comités</strong> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="{{  path('front_sc') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Scientifique</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{  path('front_org') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Organisation</strong>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                        <strong style="color:#080e5a;font-family: cambria;font-size:180%;">Soumission </strong><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a  href="{{  path('front_soumettre') }}">
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">
+                                    Comment soumettre</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{  path('front_ethique') }}">
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">
+                                    Ethiques de soumission</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{  path('front_callpaper') }}">
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">
+                                    Appel à communication</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{  path('front_guide') }}">
+
+                                <strong style="color:#080e5a;font-family: cambria;font-size:180%;">  ATM Guidelines</strong>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="{{  path('sign_up') }}">
+
+                        <strong style="color:#080e5a;font-family: cambria;font-size:180%;">S'inscrire</strong>
+                    </a>
+                </li> 
+
+
+
+                {% if is_granted('ROLE_USER') %} 
+                    <li class="dropdown">
+
+                        {% if is_granted('ROLE_ADMIN') %}
+
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                                <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Mon compte</strong>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_backoffice_homepage')}}">
+                                        <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Administration </strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('fos_user_profile_show')}}">
+                                        <strong style="color:#080e5a;font-family: cambria;font-size:170%;">  Espace Admin </strong>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="{{path('fos_user_security_logout')}}">
+
+                                        <strong style="color:#080e5a;font-family: cambria;font-size:170%;"> {{ app.user|title }} - Déconnexion </strong>
+                                    </a>
+                                </li></ul>
+                        <li class="dropdown">
+                            <a  class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown"> <span class="badge" > {{ render (controller('tutoFrontofficeBundle:Notification:count')) }} </span> <strong style="color:#080e5a;font-family:cambria;font-size:180%;"> Notification </strong>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                {{ render (controller('tutoFrontofficeBundle:Notification:notification',{id:app.request.get('id')})) }} 
+
+                            </ul>
+
+                        </li>
+                    {% endif %}
+                    {% if is_granted('ROLE_EVAL') %}
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                            <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Mon compte</strong>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{path('fos_user_profile_show')}}">
+                                    <strong style="color:#080e5a;font-family: cambria;font-size:170%;">  Espace Evaluateur </strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{path('fos_user_security_logout')}}">
+
+                                    <strong style="color:#080e5a;font-family: cambria;font-size:170%;">{{ app.user|title }} - Déconnexion </strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown"> <span class="badge"> {{ render (controller('tutoFrontofficeBundle:Notification:count')) }} </span> <strong style="color:#080e5a;font-family:cambria;font-size:170%;"> Notification </strong>
+                                <b class="caret"></b>
+                            </a> 
+                            <ul class="dropdown-menu">
+
+                                {{ render (controller('tutoFrontofficeBundle:Notification:notification',{id:app.request.get('id')})) }} 
+
+
+
+
+
+                            </ul>
+                        </li>
+
+
+                    {% endif %}
+                    {% if is_granted('ROLE_CHERCH') %}
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                            <strong style="color:#080e5a;font-family: cambria;font-size:170%;">Mon compte</strong>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{path('fos_user_profile_show')}}">
+                                    <strong style="color:#080e5a;font-family: cambria;font-size:170%;"> Espace Chercheur </strong>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="{{path('fos_user_security_logout')}}">
+
+                                    <strong style="color:#080e5a;font-family: cambria;font-size:170%;">  {{ app.user|title }} - Déconnexion </strong>
+                                </a>
+                            </li></ul>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown"> <span class="badge"> {{ render (controller('tutoFrontofficeBundle:Notification:count')) }} </span> <strong style="color:#080e5a;font-family:cambria;font-size:170%;"> Notification </strong>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                {{ render (controller('tutoFrontofficeBundle:Notification:notification',{id:app.request.get('id')})) }} 
+
+                            </ul>
+                        </li>
+
+
+                    {% endif %}
+
+
+
+                {% else %}
+                    <li class="dropdown">
+                        <a href="{{path('fos_user_security_login')}}"> <strong style="color:#080e5a;font-family: cambria;font-size:170%;">
+
+                                Se connecter </strong>
+
+                        </a>
+
+                    </li>
+                {% endif %}
+
+                </li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- end: SEARCH FORM -->
+</div>

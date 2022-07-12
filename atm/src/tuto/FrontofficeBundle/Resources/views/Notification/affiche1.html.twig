@@ -1,0 +1,81 @@
+
+    
+ {% extends ":front:Front.html.twig" %}
+
+{% block title %}Papiers Envoyés{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+           
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                                 {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                {% include ':front:profil.html.twig' %}
+             {%else%}
+                                {% if is_granted('ROLE_CHERCH') %}
+                                {% include ':front:ProfilChercheur.html.twig' %}
+                            {%endif%}{%endif%}
+                            <h1 align="left" class="icon-box-title">
+                                     <b> <font color='#0d0b6f' >  Les papiers que vous avez envoyés  </font></b></h1><br><br>
+           
+                            <div class="icon-box-content">  
+                             <div class="row">
+                                     <div class="col-md-12 col-sm-12">
+                                         
+                                   
+                                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                                         <tr>
+        
+                                             <th><h3><b><div align='center'>Code du papier</div>  </b> </h3> </th>
+                                             <th><h3><b><div align='center'>Titre du papier </div></b> </h3>  </th>
+                                             <th><h3><b><div align='center'>Code Chercheur</div>  </b> </h3>  </th>
+                                             <th><h3><b><div align='center'>Le papier </div> </b> </h3>  </th>
+   </tr>
+    {% for soumission in soumission %}
+   <tr>
+       
+       <td><h5><div align='center'>Paper_{{soumission.id}}</div></h5></td>
+       <td><h5><div align='center'>{{soumission.titrePapier}}</div></h5></td>
+       <td><h5><div align='center'> User_{{soumission.user.id}}</div></h5></td>
+       
+       <td><h5><div align='center'><object data="{{ asset(soumission.assetPath1)}}"  type="application/pdf" width="50%" height="25%"  >
+
+                   </object></div>
+
+               <div align='center'><p><a href="{{ asset(soumission.assetPath1)}}">click here to download the PDF file.</a> </p></div> </td>
+       
+                </tr>
+                                    {% endfor %}
+                                 
+                                        </table>
+                           
+                                   
+                                    
+                                     </div>
+                                     </div>
+                            </div>
+                               
+                           
+                                           
+                                       
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                    
+                            </div>
+
+                                 
+                                    
+
+
+              
+                                    
+        </section>
+
+    {% endblock %}

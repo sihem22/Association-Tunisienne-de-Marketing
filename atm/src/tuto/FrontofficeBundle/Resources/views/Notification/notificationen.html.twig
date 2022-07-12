@@ -1,0 +1,25 @@
+<li><a href="{{ path('notification_affichen') }}"> display all
+  </a></li>
+    {% for notification in notifications %}
+
+    {% if is_granted('ROLE_EVAL')or is_granted('ROLE_ADMIN') %}
+        {% if notification.evaluationfinal== null %}
+            <li> <a href="{{ path('front_Succesen',{'id':notification.soumission.id ,'notifId':notification.id }) }}">  
+                   
+                    <b><font color="black"> You received a paper !!!</font></b> <br>
+                  
+                     Date: {{notification.dateNotif|date('d/m/Y')}}</a> </li>
+                {%endif%} {%endif%}
+                {% if notification.evaluationfinal!=null %}
+                    {% if notification.evaluationfinal.etat.id=="6"%}
+
+                        <li>   <a href="{{ path('front_repEvaluationen',{'soumission':notification.soumission.id ,'id':notification.evaluationfinal.id,'notifId':notification.id}) }}">
+                                   
+                                <font color="black"> <b> You have received your evaluation!!!</b> </font>   <br>
+                                Date: {{notification.dateNotif|date('d/m/Y')}}</a> </li>
+
+                            {%endif%} {%endif%}
+
+                     
+
+                        {% endfor %}

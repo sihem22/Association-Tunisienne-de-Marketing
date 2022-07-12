@@ -1,0 +1,22 @@
+ {% extends ":front:Front.html.twig" %}
+{% block title %}Confirmation{% endblock  %}
+{% block body %}
+
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        {% trans_default_domain 'FOSUserBundle' %}
+<p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    {% if targetUrl %}
+    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+    {% endif %}
+
+                        </div>
+                    </div>
+            </div>
+    </section>
+{%endblock%}

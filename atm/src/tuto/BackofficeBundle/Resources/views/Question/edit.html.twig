@@ -1,0 +1,134 @@
+{% extends ":back:base.html.twig" %}
+{% block title %} Question{% endblock  %}
+{% block body %}
+<div class="container">
+        <div class="row">
+           <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="clip-home-2"></i>
+                         <a href="{{path('tuto_frontoffice_homepage')}}">
+                            Front Office
+                        </a>
+                    </li>
+                    <li class="active">
+                        <i><b>  Back Office </b> </i>
+                    </li>
+                    
+                </ol>
+            </div>
+        </div>
+        </div>
+     <br>
+         
+        <br>
+                                           <div class="row">
+            <div class="col-md-12">
+                <!-- start: FORM VALIDATION 1 PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Ajouter une Question 
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                            </a>
+                            <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-expand" href="#">
+                                <i class="fa fa-resize-full"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-close" href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        
+
+                        {{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+                        <style>
+                                    .required:after { content:" *";
+                                                      color:red; }
+                                    </style>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="errorHandler alert alert-danger no-display">
+                                    <i class="fa fa-times-sign"></i> Vous avez des erreurs , S'il vous plaît vérifier ci-dessous
+                                </div>
+                                <div class="successHandler alert alert-success no-display">
+                                    <i class="fa fa-ok"></i> Votre validation de formulaire est réussie!
+                                </div>
+                            </div>
+      
+                        </div>
+             <div class="row">
+                
+                 <div class="col-md-8">
+                     {{ form_row(form.libelle,{ 'label': 'Libellé :','attr':{'placeholder':'Donner la libelle de la question'}}) }}
+                 </div>
+             </div>
+                 <br>
+                 <div class="row">
+                  <div class="col-md-8">
+                     {{ form_row(form.TypeQuestion) }}
+                 </div>
+             </div>
+                 <br>
+              <div class="row">
+                  <div class="col-md-8">
+                     {{ form_row(form.ValeursDefault) }}
+                  </div>
+                </div>
+           
+                  <br>
+ 
+    <button data-style="expand-left" class="btn btn-teal ladda-button">
+            <span class="ladda-label"> Ajouter une Question</span>
+            <i class="fa fa-arrow-circle-left"></i>
+            <span class="ladda-spinner"></span>
+        </button>  <font color="red"><i class="fa fa-warning faa-flash animated"></i> 
+
+                      champ obligatoire * </font>
+            
+            {{ form_end(form) }}
+ 
+
+ </div>
+            <style>
+                 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                    font-size: 14px;
+
+                                    padding: 10px 10px;
+
+                                    width:  800px ;
+                                    margin-top: 10px;
+                                    display: flow-root;}
+                                select {
+
+                                    width: 800px;
+                                    padding: 15px;
+
+                                }
+                                 label {
+                            font-size: 20px;
+                            color: #222;
+                        }
+                </style>
+                </div>
+            </div>
+                                           </div>
+             
+ </div>
+    {% endblock %}
+                    

@@ -1,0 +1,4 @@
+{% for soumission in soumissions|reverse %}
+{% if soumission.type.id=='1'%}<a href="{{ path('tuto_soumission') }}">{%else%}{% if soumission.type.id=='2'%}<a href="{{ path('tuto_soumission1') }}">{%else%}{% if soumission.type.id=='3'%}<a href="{{ path('tuto_soumission2') }}">{%else%}{% if soumission.type.id=='4'%}<a href="{{ path('tuto_soumission3') }}">{%endif%}{%endif%}{%endif%}{%endif%}<i class="clip-notification-2"></i>Vous avez une nouvelle soumission en attente de la part de {{soumission.user}}<br>
+
+{% endfor %}

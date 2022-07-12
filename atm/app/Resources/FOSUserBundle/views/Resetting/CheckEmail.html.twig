@@ -1,0 +1,24 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}vérifier le courriel{% endblock  %}
+{% block body %}
+
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+
+                        {% trans_default_domain 'FOSUserBundle' %}
+                        <font align="justify"> <font size="5"><font color="#212358">  <b>{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}</b></font></font></font>
+                       
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock%}

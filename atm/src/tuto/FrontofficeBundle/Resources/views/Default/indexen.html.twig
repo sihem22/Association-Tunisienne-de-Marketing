@@ -1,0 +1,325 @@
+{% extends ":front:Fronten.html.twig" %}
+{% block body %}
+    <div class="main-container">
+        <!-- start: REVOLUTION SLIDERS -->
+        <section class="fullwidthbanner-container">
+            <div class="fullwidthabnner">
+                <ul>
+                    <!-- start: teaching SLIDE -->
+                    {{ render (controller('tutoFrontofficeBundle:Default:Affiche1')) }}
+
+                </ul>
+            </div>
+        </section>
+        <!-- end: REVOLUTION SLIDERS -->
+
+        <style>
+
+            a {
+                color: #080e5a;
+                font-family: cambria;
+            }
+
+            body {
+                color: #0C0C0C;
+                direction: ltr;
+                font-family: cambria;
+                font-size: 13px;}
+            h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+                font-family: cambria;
+                color: #383838;}
+            .circle-icon {
+                background-color: #f14100;
+            }
+            .circle-icon.circle-bricky {
+                background-color: #cb3928}
+            .circle-icon.circle-teal {
+                background-color: #032d51;}
+            </style>
+            <!-- start: CORE BOXES CONTAINER -->
+            <section class="wrapper padding50">
+            <!-- start: ABOUT US CONTAINER -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 style="text-align: right;"><font color="#080e5a"><b>Important Dates
+</b></font></h1>
+
+
+                        <h3 style="text-align: right;">
+
+                            <b>    Opening of communications submissions</b>
+                        </h3>
+                        <h4 style="text-align: right;">     <span><i class="fa fa-calendar"></i><font color="#080e5a"> 01 Septembre 2017 </font></span><br></h4>
+                        <h3 style="text-align: right;">
+
+                            <b>  Deadline for submissions </b>
+                        </h3>
+
+                        <h4 style="text-align: right;">  <span><i class="fa fa-calendar"></i><font color="#080e5a"> 01 Décembre 2017</font> </span> </h4>
+
+                        <h3 style="text-align: right;">
+
+                            <b>   Notification of decisions to authors</b>
+                        </h3>
+                        <h4 style="text-align: right;">  <span><i class="fa fa-calendar"></i><font color="#080e5a"> 20 Janvier 2018 </font></span> </h4>
+
+                        <h3 style="text-align: right;">
+
+                            <b> Start of registration</b>
+                        </h3>
+                        <h4 style="text-align: right;">       <span><i class="fa fa-calendar"></i><font color="#080e5a"> 27 Février 2018 </font></span> </h4>
+
+                        <h3 style="text-align: right;">
+
+                            <b>   Deadline for return of amended communications</b>
+                        </h3>
+                        <h4 style="text-align: right;">    <span><i class="fa fa-calendar"></i><font color="#080e5a"> 01 Mars 2018</font> </span> </h4>
+
+                        <h3 style="text-align: right;">
+
+                            <b>  Date of the symposium</b>
+                        </h3>
+                        <h4 style="text-align: right;">   <span><i class="fa fa-calendar"></i><font color="#080e5a"> 06-07 Avril 2018</font> </span> </h4>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-sm-6">
+                        <ul class="icon-list animate-group">
+                            <li>
+                                <div class="timeline animate" data-animation-options='{"animation":"scaleToBottom", "duration":"300"}'></div>
+                                <i class="clip-stack-empty circle-icon circle-teal animate" data-animation-options='{"animation":"flipInY", "duration":"600"}'></i>
+                                <div class="icon-list-content">
+                                    <h1><font color="#080e5a"><b>16th  ATM Symposium</b></font></h1>
+                                    <p>
+                                        <font size="4"> <b> The Tunisian Association of Marketing (ATM),</b> governed by the 1959 Law on Associations, was founded by a group of teachers ...
+                                    <div align='right'>    <a href="{{  path('front_colloque') }}"> <font color="#080e5a"><b>Click here
+</b></font> </a>  </font></div>
+                                    </p>
+                                </div>
+                                <style>
+                                    .button.grey {
+                                        width: 130px;
+                                        height:35px;
+
+
+                                    }
+
+
+
+                                </style>
+                            </li>
+                            <li>
+                                <div class="timeline animate" data-animation-options='{"animation":"scaleToBottom", "duration":"300", "delay": "300"}'></div>
+                                <i class="clip-download circle-icon circle animate" data-animation-options='{"animation":"flipInY", "duration":"600"}'></i>
+                                <div class="icon-list-content">
+
+                                    <h1><font color="#080e5a"><b>Submit a paper</b></font></h1>
+                                    <p>
+                                        <font size="4">   Before submitting your manuscript, please read the instructions carefully to the authors ...
+                                    <div align='right'>    <a href="{{  path('front_soumettre') }}"> <font color="#080e5a"><b>Click here</b></font> </a>  </font></div>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline animate" data-animation-options='{"animation":"scaleToBottom", "duration":"300", "delay": "300"}'></div>
+                                <i class="clip-bulb circle-icon circle-bricky animate" data-animation-options='{"animation":"flipInY", "duration":"600"}'></i>
+                                <div class="icon-list-content">
+                                    <h1><font color="#080e5a"><b>News</b></font></h1>
+                                    <p>
+                                        <font size="4">   Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.
+                                    <div align='right'>    <a href="{{  path('front_soumettre') }}"> <font color="#080e5a"><b>Click here</b></font> </a>  </font></div>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end: ABOUT US CONTAINER -->
+        </section> 
+
+        <section class="wrapper wrapper-grey">
+
+            <!-- start: CLIENTS CONTAINER -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="center"><b><font color='#080e5a'>Our partners and sponsors</font></b></h2>
+                            <hr>
+                            </div>
+                            <div class="flexslider col-md-12 animate-group" data-plugin-options='{"directionNav":false, "animation":"slide", "slideshow": false}' data-animation-interval="100">
+                                <ul class="slides">
+                                    <li >
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="https://www.lesphinxmea.com/">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front/images/les.png') }}" alt=""
+                                                     style="width: 160px;height: 100px;"></a> 
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.elamouri.com/">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front//images/Institut.GIF') }}" alt="" style="width: 160px;height: 100px;"></a>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.vendas-packaging.com/home.html">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front/images/Image4.png') }}" alt=""style="width: 160px;height: 100px;"></a>
+                                        </div>
+
+
+
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.utm.rnu.tn/utm/fr/index.php">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front/images/utm.png') }}" alt=""style="width: 160px;height: 100px;"></a>
+                                        </div>
+                                        <br>
+
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.wifakbank.com/">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration"k:"300"}' src="{{ asset('front/images/bank.png') }}" alt=""style="width: 160px;height: 100px;"></a>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.wifakbank.com/">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front/images/Image2.png') }}" alt=""style="width: 160px;height: 100px;"></a>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <a href="http://www.wifakbank.com/">
+                                                <img class="img-responsive animate" data-animation-options='{"animation":"fadeIn", "duration":"300"}' src="{{ asset('front/images/Image3.png') }}" alt=""style="width: 160px;height: 100px;"></a>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- end: CLIENTS CONTAINER -->
+        </section>
+        <!-- start: ABOUT US CONTAINER -->
+        <section class="wrapper" style="min-height:400px; background-image: url('{{ asset('front/images/covers.jpg') }}')" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="center white"> <b>How to do?
+</b></h1><br>
+
+                    </div>
+                </div>
+                <div class="row animate-group">
+
+                    <div class="col-sm-6">
+                        <div class="icon-box animate" data-animation-options='{"animation":"flipInY", "duration":"600"}'>
+                            <i class="icon-box-icon clip-study"></i>
+                            <h2 class="icon-box-title" style="color:#080e5a;"><b>You are a researcher </b></h2>
+                            <div class="icon-box-content">
+                                <p>
+                                <h3><b> Join us to deposit your papers and participate in our 16th symposium</b></h3>
+                                <br>
+
+                                <a>
+                                    <strong><font color="#080e5a"> Read more</font></strong>
+                                </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="icon-box animate" data-animation-options='{"animation":"flipInY", "duration":"600"}'>
+                            <i class="icon-box-icon fa fa-group" ></i>
+                            <h2 class="icon-box-title" style="color:#080e5a;"><b>You are an evaluator</b></h2>
+                            <div class="icon-box-content">
+                                <p>
+                                <h3> <b> Become one of our evaluators and participate in our 16 th symposium</b></h3>
+                                <br>
+
+                                <a>
+                                    <strong> <font color="#080e5a"> Read more</font></strong>
+                                </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="wrapper padding50">
+            <!-- start: BLOG POSTS AND COMMENTS CONTAINER -->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <h1><font color="#080e5a"><b>Speakers and Guests</b></font></h1><br>
+                        <div class="row">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="col-md-12">
+                                            <blockquote class="testimonial">
+                                                <p>
+                                                    <b> Professor Emeritus in Economics and Management (Marketing)<br>
+                                                       Higher Education Tunis <br>  University of Paris 1 Panthéon-Sorbonne</b><br>
+                                                </p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                            <div class="testimonial-author">
+                                                <div class="img-thumbnail img-thumbnail-small">
+                                                    <img src="{{ asset('front/images/mustapha.png') }}" alt="">
+                                                </div>
+                                                <p><a href="https://www.linkedin.com/in/zghal-mustapha-198bab68/">
+                                                        <strong><font color="#080e5a">
+                                                            Mustapha Zghal</font></strong></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-md-12">
+                                            <blockquote class="testimonial">
+
+                                                <p>
+                                                    <b>  Associate Professor of Marketing <br> University of Tunis El Manar<br>
+                                                        Faculty of Economics and Management of Tunis</b><br>
+                                                <style>
+                                                    blockquote.testimonial p {
+                                                        color: #8A8A8A;
+                                                        font-size: 20px;
+                                                        font-family: cambria;
+
+                                                    }
+                                                </style>
+                                                </p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                            <div class="testimonial-author">
+                                                <div class="img-thumbnail img-thumbnail-small">
+                                                    <img src="{{ asset('front/images/faouzi.png') }}" alt="">
+                                                </div>
+                                                <p><a href="https://www.linkedin.com/in/dekhil-fawzi-b337a031/?ppe=1">
+                                                        <strong><font color="#080e5a">
+                                                            Faouzi Dekhil</font></strong></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: BLOG POSTS AND COMMENTS CONTAINER -->
+        </section>
+    </div>								 <i class="fa fa-angle-right"></i>
+</a>
+</div>
+{% endblock %}

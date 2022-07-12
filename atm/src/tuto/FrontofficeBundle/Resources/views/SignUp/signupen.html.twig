@@ -1,0 +1,101 @@
+{% extends ":front:Fronten.html.twig" %}
+{% block title %}Create an account
+{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px;">
+        <div class="container">
+            <div class="row" style="margin-top: 15px">
+                <div class="col-md-12">
+                    {% for label, flashes in app.session.flashbag.all %}
+                        {% for flash in flashes %}
+                            <div class="alert alert-{{label}}">
+                                <button class="close" data-dismiss="alert">×</button>
+                                <strong>{{ label|title }} !!!</strong> :  {{ flash }}
+
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            <p><h4>If you have an account with us, you can directly log in using your settings <a href="{{path('fos_user_security_login')}}"><b>Click here</b></a></h4></p>
+            <div class="row animate-group">
+                <div class="col-sm-6">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        <div class="icon-box-title"><img style="width: 150px;height: 100px;"  alt="" src="{{ asset('front/images/chercheur.png') }}"> <br>
+                            <br> <h1> <b>  You are a researcher </b></h1></div>
+                        <div class="icon-box-content">
+
+
+
+                            <p style="text-align: center;">
+                                <strong>Are you a beginner or confirmed researcher and would like to share your experience with the scientific community?</strong>
+                            </p>
+                            <p style="text-align: center;">
+
+
+
+                            <h4>      1- Create a researcher account.<br>
+
+                                <br>   2- Deposit the paper.<br>
+
+                                <br>   3- Get a new rating <br> </h4>
+
+                            <br> 
+                            <a  class="btn btn-default pull-left" href="{{path('fos_user_registration_register')}}"> je suis un chercheur</a> <br>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        <div class="icon-box-title"><img style="width: 120px;height: 100px;"  alt="" src="{{ asset('front/images/glasses.png') }}"> <br>
+                            <br> <h1> <b>  You are an evaluator
+                                </b></h1></div>
+                        <style>
+                            h1 {
+                                font-family: cambria;
+                                color: #0d0b6f
+                            }
+                            .h4{
+                                font-family: cambria;  
+                            }
+                        </style>
+                        <div class="icon-box-content">
+                            <p>
+                            <p style="text-align: center;">
+                                <strong> You are a professional and you want to contribute to the evaluation of academicians?  </strong>
+                            <style>
+                                p strong {
+                                    font-size: 15px;
+                                    color: #111458;
+                                    font-family: cambria;} 
+                                </style>
+                                </p>
+                                <p style="text-align: center;">
+
+
+
+                            <h4>   <br> 1- Create an appraiser account.<br>
+
+                                <br>   2- Receiving papers / Depositing paper<br>
+
+                                <br>   3-  Evaluate the papers then send ... / Get an evaluation<br> </h4>
+
+                            <br> <a  class="btn btn-default pull-right" href="{{path('register1')}}"> I am an evaluator </a> <br>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{%endblock%}
+

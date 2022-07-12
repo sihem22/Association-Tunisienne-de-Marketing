@@ -1,0 +1,74 @@
+{% extends ":front:Front.html.twig" %}
+
+{% block title %}Liste d'articles{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+    
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                 
+                                          <h4> <font color="red"><i class="fa fa-warning faa-flash animated"></i> 
+
+                                           <b>REMARQUE : Si vous appuyez sur Type, tous les articles relatifs à cette année seront affichés.</b></h4><br><br>
+                                       
+                                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+
+
+
+                                          
+
+                                              
+                                                <tr>
+                                                    <th><h3><b><div align='center'>Titre du article </div></b> </h3> </th>
+                                                    <th><h3><b><div align='center'>Mots clés</div> </b> </h3> </th>
+                                                    <th><h3><b><div align='center'>Type</div> </b> </h3> </th>
+                                                    <th><h3><b><div align='center'> Article</div></b> </h3> </th>
+                                                     <th><h3><b><div align='center'> Auteurs</div></b> </h3> </th>
+                                                    
+                                                   
+                                                   
+                                                </tr>
+                                                  {% for article in article %}
+                                                <tr>
+                                                    
+                                                            <td><h5>{{article.titre}}</h5></td>
+                                                             <td><h5>{{article.motcle}}</h5></td>
+                                                             <td><h5><a href="{{path('tuto_affiche2',{'id':article.annee.id,'id2':article.type.id})}}"><b>{{article.type}}</b></a></h5> </font></font></div> </div>
+</td>
+                                                   
+                                                     
+                                                    <td><h5><object data="{{ asset(article.assetPath)}}"  type="application/pdf" width="50%" height="50%"  >
+
+                                                            </object>
+                                                            <p><a href="{{ asset(article.assetPath)}}">Cliquer ici pour téléchrger le fichier pdf</a></h5></td>
+                                                    <td><h5>{{article.auteurs}}</h5></td>
+
+                                            {% endfor %}
+                                        </table>
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div></div></div>
+
+
+    </section>
+{%endblock%}

@@ -1,0 +1,87 @@
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Notification{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profilen.html.twig' %}
+                                {%else%}
+                                {% include ':front:ProfilChercheuren.html.twig' %}
+                            {%endif%}
+
+                            
+
+
+                             <h1 align="left" class="icon-box-title">
+                                     <b> <font color='#0d0b6f' >  Evaluations made for your paper  </font></b></h1><br><br>
+            
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+
+                                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+
+
+
+                                            {% for evaluationfinal in evaluationfinal%} 
+
+                                                <font align='center'>   <h2><font color='red'><b> You are {{evaluationfinal.resultat}}!!!!</b></font></h2></font>
+                                                <tr>
+                                                    <th><h4><b>Your paper:</b> </h4> </th>
+                                                      <th><h4><b>Type of submission:</b> </h4> </th>
+                                                    <th><h4><b>Note:</b> </h4> </th>
+                                                    <th><h4><b>Evaluation 1:</b> </h4>  </th>
+                                                    <th><h4><b>Evaluation 2:</b> </h4>  </th>
+                                                    {% if evaluationfinal.path3 is not null %}
+                                                    <th><h4><b>Evaluation 3:</b> </h4></th>{%endif%}
+                                                </tr>
+                                                <tr>
+                                                    <td><h5><object data="{{ asset(evaluationfinal.soumission.assetPath)}}"  type="application/pdf" width="50%" height="50%"  >
+
+                                                            </object>
+                                                            <p><a href="{{ asset(evaluationfinal.assetPath)}}">Click here to download the pdf file</a></h5></td>
+                                                            <td><h5>{{evaluationfinal.soumission.type}}</h5></td>
+                                                    <td><h5>{{evaluationfinal.note}}</h5></td>
+                                                     
+                                                    <td><h5><object data="{{ asset(evaluationfinal.assetPath)}}"  type="application/pdf" width="50%" height="50%"  >
+
+                                                            </object>
+                                                            <p><a href="{{ asset(evaluationfinal.assetPath)}}">Cliquer ici pour téléchrger le fichier pdf</a></h5></td>
+                                                    <td><h5><object data="{{ asset(evaluationfinal.assetPath1)}}"  type="application/pdf" width="50%" height="50%"  >
+
+                                                            </object>
+                                                            <p><a href="{{ asset(evaluationfinal.assetPath1)}}">Click here to download the pdf file</a></h5></td>
+                                                    <td><h5>{% if evaluationfinal.path3 is not null %}<object data="{{ asset(evaluationfinal.assetPath2)}}"  type="application/pdf" width="50%" height="50%"  >
+
+                                            </object>
+                                                            <p><a href="{{ asset(evaluationfinal.assetPath2)}}">Click here to download the pdf file</a> </p>{%endif%}</h5></td>
+
+
+                                            {% endfor %}
+                                        </table>
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div></div></div>
+
+
+    </section>
+{%endblock%}

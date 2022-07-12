@@ -1,0 +1,131 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}Modifier vos coordonnées{% endblock  %}
+{% block body %}
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        <div class="icon-box-content">
+
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profil.html.twig' %}
+                            {%else%}
+                                {% if is_granted('ROLE_CHERCH') %}
+                                    {% include ':front:ProfilChercheur.html.twig' %}
+                            {%endif%}{%endif%}
+
+                            <div class="horizontal-form margin-bottom-40">
+                                <h1 align="left" class="icon-box-title">
+                                    <b> <font color='#0d0b6f' >  changer votre photo ou bien l'un des vos <br><br>coordonnées  à l'aide du formulaire ci-dessous </font></b></h1><br><br>
+                               
+
+                                {{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        {{ form_row(form.Nom,{ 'label': 'Nom/Last name:'})}}
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            {{ form_row(form.Prenom,{ 'label': 'Prénom/First name:'})}}
+                                        </div></div></div><br><br>
+
+                                <br>
+                                <div align="center">
+                                    <label for="file-upload" >
+                                        {{ form_label(form.Image) }}</label> 
+                                    <div class="custom-file-upload" id="file-upload">
+                                        {{ form_widget(form.Image) }}</div>
+                                </div>
+                                <style>
+
+                                    .custom-file-upload{
+                                        border: 1px solid #ccc;
+                                        display: inline-block;
+                                        padding: 6px 12px;
+                                        cursor: pointer;
+                                    }
+                                </style></div><br><br>
+
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Civilite,{ 'label': 'Genre/Gender :'})}}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Pays,{ 'label': 'Pays/Country :'})}}
+                                </div></div><br><br>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Discipline,{ 'label': 'Domaine de recherche/Domain of research :'})}}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Statut,{ 'label': 'Titre/Title :'})}}
+                                </div></div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Institution,{ 'label': 'Institution:'})}}
+                                </div>
+                                <div class="col-sm-6">
+                                    {{ form_row(form.Universite,{ 'label': 'Université/University :'})}}
+                                </div>
+                            </div> </div><br><br>
+
+
+                        <br>
+                       <div>
+                    
+                    <button type="submit" class="button orange glossy  btn-lg" value="{{ 'change_password.submit'|trans }}"><h3><font color="white"><b>Enregistrer</b></font></h3></button> <b><font color="red">  champ obligatoire *  </font></b>
+                </div>
+                 <style>
+                         .button.orange {
+                            width: 170px;
+                            height:70px;
+                            background-color: #FF4500;
+                          
+                        }
+                       
+
+
+                    </style>
+                        {{ form_end(form) }}
+                        <style>
+                            .required:after { content:" *";
+                                              color:red; }
+                            </style>
+                            <style>
+                            textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                font-size: 14px;
+
+                                padding: 10px 10px;
+
+                                width: 300px ;
+                                margin-top: 10px;
+                                display: flow-root;}
+                            select {
+
+                                width:300px;
+                                padding: 15px;
+
+                            }
+
+
+                        </style>
+
+
+
+                        <!-- END FORM-->
+                    </div>
+                </div>
+            </div> </div></div></div></section>
+
+{%endblock%}

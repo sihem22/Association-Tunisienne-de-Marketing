@@ -1,0 +1,97 @@
+{% extends ":back:base.html.twig" %}
+{% block title %} Evaluation {% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% for label, flashes in app.session.flashbag.all %}
+            {% for flash in flashes %}
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert">
+                        ×
+                    </button>
+                    <i class="fa fa-check-circle"></i>
+                    <strong>{{ label|title }} !!!</strong> :  {{ flash }}
+
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- start: DYNAMIC TABLE PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Liste des évaluations
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#"> </a>
+                            <a class="btn btn-xs btn-link panel-expand" href="#"> <i class="fa fa-resize-full"></i> </a>
+
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                    <th class="center">Code évaluation</th> 
+                                    <th class="center">Date évaluation</th>  
+                                    <th class="center"> User </th>
+                                    <th class="center"> Soumission</th>
+
+
+                                    <th class="center">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for evaluation in evaluations %}
+                                    <tr>
+                                        <td class="center">ATM2018/{{evaluation.id}}</td>
+                                        <td class="center">{{evaluation.dateEvaluation|date('d/m/Y')}}</td>
+
+                                        <td class="center">{{evaluation.user}}</td>
+                                        <td class="center">Paper_{{evaluation.soumission.id}}</td>
+
+
+
+                                        <td td class="center">
+                                            <a href="{{path('tuto_evaluationreponse',{'id':evaluation.id})}}" class="btn btn-xs btn-green tooltips"  data-original-title="affiche" data-placement="top"><i class="fa fa-eye"></i></a>
+                                            <a href="{{path('tuto_evaluation_supp',{'id':evaluation.id})}}"  class="btn btn-xs btn-bricky tooltips"  data-original-title="Supprimer" data-placement="top" onclick="javascript:return(confirm('Voulez-vous  supprimer cette ligne??'))"><i class="fa fa-times fa fa-white"></i></a>
+                                            {% if evaluation.vu.id=='1'%}
+                                         <a href="{{path('tuto_vu_modif',{'id':evaluation.id})}}" class="btn btn-xs btn-beige tooltips"  data-original-title="vu" data-placement="top">vu<i class="fa fa-ok"></i></a>
+                                         {%else%}
+                                         <a class="btn btn-xs btn-green tooltips">Vu</a>
+                                         {%endif%}
+                                    </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- end: DYNAMIC TABLE PANEL -->
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}

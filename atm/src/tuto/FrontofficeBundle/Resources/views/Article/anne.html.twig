@@ -1,0 +1,58 @@
+{% extends ":front:Front.html.twig" %}
+
+{% block title %}Article par année{% endblock  %}
+{% block body %}
+      
+  
+     
+         
+  
+        <div class="container">
+						
+
+  <section class="wrapper" >
+       
+          {{ render (controller('tutoFrontofficeBundle:Article:recherchett'))}}
+           
+            <div class="row animate-group">
+                <div class="col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                    
+                        <div class="icon-box-content">
+                            <div align='left'>
+
+                                <p><font size="5">Plus de 1 000 papiers ont été publiés dans les actes de conférence de l’ATM. Vous avez un accès  gratuit à l’intégralité des papiers de la conférence sous un format PDF.</p><br>
+                    <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                    <th class="center">Année</th>
+
+                                   
+                                     </tr>
+                            </thead>
+                            <tbody>
+                            {% for annee in annee %}
+                                    <tr>
+                                        <td class="center"><a href="{{path('tuto_affiche1',{'id':annee.id})}}">{{annee.libelle}}</a></td>
+
+                                        
+                                         </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                                <p><div align='justify'><font size="5">Toutes les communications présentées lors des colloques de l’ATM depuis, 2003 jusqu’à la dernière édition de 2016, sont disponibles sur le site web et peuvent être téléchargées gratuitement sous format PDF. Vous cliquez sur année, ensuite vous consultez la liste des communications et enfin vous <font color='red'>cliquez </font> sur l’icône PDF devant la communication désirée. <br>
+
+  <p>Citation d’une communication présentée lors du colloque de l’ATM :</p>
+  <p>Pour citer une communication présentée lors d’un colloque de l’ATM, vous devez suivre la structure suivante :</p>
+  <p>Auteur(s) (année), "Titre du papier", Les actes du numéro colloque International de l’Association Tunisienne de Marketing, date, ville,  [valable au  www.atm-colloque.com/colloquesprecedents] </p>
+  <p><b>Exemple :</b></p>  
+  <p><b>Chérif E. et Lemoine J.F. (2014),</b> L’influence du type de voix du conseiller virtuel sur la présence sociale, la confiance envers le conseiller virtuel, la confiance envers le site et les intentions comportementales, XXXème Congrès International de l’Association Française du Marketing (AFM), 15 et 16 mai, Montpellier, [valable au<br> <a href='https://www.afm-marketing.com/fr/system/files/publications/20160517000049_CHERIF_LEMOINE.pdf '>https://www.afm-marketing.com/fr/system/files/publications/20160517000049_CHERIF_LEMOINE.pdf ]</a> </p>
+
+                                </div></div>
+                    </div>
+    </div>
+                </div></div>
+</section>
+	</div>
+
+{%endblock%}

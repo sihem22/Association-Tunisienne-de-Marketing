@@ -1,0 +1,100 @@
+ {% extends ":front:Fronten.html.twig" %}
+{% block title %}Contact Us{% endblock  %}
+{% block body %}
+<section class="wrapper padding50">
+ <div class="container">
+{{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+                         <style>
+                                    .required:after { content:" *";
+                                                      color:red; }
+                                    </style>
+
+<div class="row" style="margin-top: 15px">
+    <div class="col-md-6">
+        {% for label, flashes in app.session.flashbag.all %}
+            {% for flash in flashes %}
+                <div class="alert alert-{{label}}">
+                    <button class="close" data-dismiss="alert">×</button>
+                    <strong>{{ label|title }} !!!</strong> :  {{ flash }}
+
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+        <div class="row">
+                          <div class="col-md-9">          
+                        <div class="row">
+                            <div class="col-md-9">
+                                
+                                    {{ form_row(form.nom,{'attr':{'placeholder':'Lastname '}}) }}
+                            </div>
+                        </div>
+                                <br>
+                                 <div class="row">
+                            <div class="col-md-9">
+                                
+                                    {{ form_row(form.prenom,{'attr':{'placeholder':'firstname '}}) }}
+                            </div>
+                        </div>
+                                <br>
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{ form_row(form.email,{'attr':{'placeholder':'e-mail  '}}) }}
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <br>
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{ form_row(form.commentaire,{'attr':{'placeholder':'comment '}}) }}
+                            </div>
+                        </div>
+                        <br>
+                            <button class="btn btn-main-color" type="submit" >send</button></div>
+                <div class="row">
+                 {{ form_end(form) }}
+                                 <div class="col-md-3">
+                                     <h2><b>Contact Us</b></h2>
+                        <address class="margin-bottom-40">
+                            <h3>   ADRESSE : </h3>
+                            <br>
+                           <b> University of Tunis El Manar, Farhat Hached<br> B.P. n° 94 - ROMMANA - Tunis<br>1068 Faculty of Economic science and management of Tunisia,<br> B.P 248 2092,<br></b>
+                           
+                            <h3>  GSM : </h3> <b>(+216) 71 870 277 </b>
+                            <br>
+                            <h3>   Web Site: </h3>
+                            <a href=" www.fsegt.rnu.tn"> <b>www.fsegt.rnu.tn</b></a>
+                        </address>
+                             </div>
+                </div>
+                           <hr>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zuiTB_WIy9L1GnMKGeGgu3C87xU" width="1200" height="400"></iframe> 
+        </div>
+ 
+ </div> 
+
+   <style>
+                 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                    font-size: 14px;
+
+                                    padding: 10px 10px;
+
+                                    width:  800px ;
+                                    margin-top: 10px;
+                                    display: flow-root;}
+                                select {
+
+                                    width: 800px;
+                                    padding: 15px;
+
+                                }
+                </style>
+                   </section>
+                   
+               {%endblock%}

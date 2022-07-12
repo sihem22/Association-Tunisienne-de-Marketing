@@ -1,0 +1,27 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Afficher tout{% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+{% for soumission in soumissions|reverse %}
+{% if soumission.type.id=='1'%}<a href="{{ path('tuto_soumission') }}">{%else%}{% if soumission.type.id=='2'%}<a href="{{ path('tuto_soumission1') }}">{%else%}{% if soumission.type.id=='3'%}<a href="{{ path('tuto_soumission2') }}">{%else%}{% if soumission.type.id=='4'%}<a href="{{ path('tuto_soumission3') }}">{%endif%}{%endif%}{%endif%}{%endif%}<i class="clip-notification-2"></i>Vous avez une nouvelle soumission en attente de la part de {{soumission.user}}<br>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,231 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}INSCRIPTION{% endblock  %}
+{% block body %}
+
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        
+                        <style>                          
+                            .icon-box-title {
+                                font-family: fantasy;
+                                color: #121559;
+                            }
+
+                        </style>
+                        <style>
+
+                            .animate-if-visible, .animate-group .animate {
+
+                                background-color: rgba(0, 0, 0, 0);
+
+
+                                border: 1px solid black;
+
+
+
+                            }
+                       fieldset { 
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 2em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 4px groove;
+}
+</style>
+
+                        <div class="icon-box-content">
+                            <p>
+                                {{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+
+                                <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="errorHandler alert alert-danger no-display">
+                                        <i class="fa fa-times-sign"></i>Vous avez des erreurs , S'il vous plaît vérifier ci-dessous
+                                    </div>
+                                    <div class="successHandler alert alert-success no-display">
+                                        <i class="fa fa-ok"></i> Votre validation de formulaire est réussie!
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                            <fieldset>
+                                <legend> <h1><b>Information sur le compte </b> </h1> </legend>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {{ form_row(form.username,{ 'label': 'Nom Utilisateur / username :','attr':{'placeholder':'Donner le nom utlisateur'}})}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.email)}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.plainPassword.first,{ 'label': 'Mot de Passe / Password :'})}}
+                                        <style>
+                                            .required:after { content:" *";
+                                                              color:red; }
+                                            </style>
+                                        </div>
+                                    </div> 
+                                    <br>
+                                    <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.plainPassword.second,{ 'label': ' Répéter le mot de passe / RepeatPassword :'})}}
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                                    <br>
+                                    <br>
+                                    <br>
+                            <br>
+                            <fieldset class="cadre">
+                                <legend>
+                                    <h1><b>Information Personnel </b> </h1> 
+                                </legend>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Nom) }}
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Prenom) }}
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Civilite,{ 'label': 'Genre / Gender :'})}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Pays,{ 'label': 'Pays / Country :'})}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Discipline,{ 'label': 'Domaine de Recherche / Domain of research:'})}}
+                                    </div>
+
+                                </div> 
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Universite,{ 'label': 'Université / University :'})}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Institution,{ 'label': 'Institution/Institut :'})}}
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{ form_row(form.Statut,{ 'label': 'Titre / Title :'})}}
+                                    </div></div>
+                                <br>
+                                <div class="row">
+                                    <div class="hidden">
+                                        {{ form_row(form.Image)}}
+                                    </div></div>
+                                <br>
+ </fieldset>
+                                    <br>
+
+                                <br>
+                                <div align="left">
+                                  <button type="submit" class="button orange glossy  btn-lg" value="{{ 'registration.submit'|trans }}"><h3><font color="white"><b>Enregistrer</b></font></h3></button> <b><font color="red">  champ obligatoire *  </font></b>
+                                    </div>
+                                                     
+
+  <style>
+                         .button.orange {
+                            width: 170px;
+                            height:70px;
+                            background-color: #FF4500;
+                          
+                        }
+                       
+
+
+                    </style>
+                           
+                            {{ form_end(form) }}
+                            <style>
+                                h1 {
+                                    font-family: cambria;;
+                                    color: #121559;
+                                }
+                                label {
+                                    font-size: 12px;
+                                    float: left;
+                                }
+
+                                body {
+                                    color: #0C0C0C;
+                                    direction: ltr;
+                                    font-family: 'Open+Sans', sans-serif;
+                                    font-size: 13px;}
+                                textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                    font-size: 14px;
+
+                                    padding: 10px 10px;
+
+                                    width:  660px ;
+                                    margin-top: 10px;
+                                    display: flow-root;}
+                                select {
+
+                                    width: 660px;
+                                    padding: 15px;
+
+                                }
+                                label {
+                                    font-size: 16px;
+                                    color:   #121559;
+                                    font-family: cambria;
+                                }
+                                
+
+
+                            </style>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{%endblock%}

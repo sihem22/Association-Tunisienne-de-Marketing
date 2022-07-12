@@ -1,0 +1,81 @@
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Notification{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+           
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                                 {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                {% include ':front:profilen.html.twig' %}
+            
+            {%endif%}
+         
+                            <h1 align="left" class="icon-box-title">
+                                     <b> <font color='#0d0b6f' >  Send an evaluation </font></b></h1><br><br>
+          
+                            <div class="icon-box-content">  
+                             <div class="row">
+                                     <div class="col-md-12 col-sm-12">
+                                             <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                                   
+
+                             
+                                         <tr>
+        
+                                             <th><h4><b><div align='center'>Paper Code</div></b> </h4> </th>
+                                             <th><h4><b><div align='center'>Title of paper</div></b> </h4>  </th>
+                                             <th><h4><b><div align='center'>Code Researcher</div> </b> </h4>  </th>
+                                             <th><h4><b><div align='center'>The paper</div></b> </h4>  </th>
+          <th></th>
+   </tr>
+    {% for notification in notification %}
+   <tr>
+       <td><h5>Paper_{{notification.soumission.id}}</h5></td>
+       <td><h5> {{notification.soumission.titrePapier}}</h5></td>
+       <td><h5> {{notification.soumission.user.id}}</h5></td>
+       
+       <td><object data="{{ asset(notification.soumission.assetPath1)}}"  type="application/pdf" width="50%" height="25%"  >
+
+                                            </object>
+
+               <p><a href="{{ asset(notification.soumission.assetPath1)}}">click here to download the PDF file.</a> </p> </td>
+       <td>    
+       
+           <a href="{{path('front_questionnaire',{'soumission':notification.soumission.id})}}"  class="btn btn-purple"  data-original-title="evaluer" data-placement="top" ><b>Evaluate</b></a> </div> 
+          
+               
+                                    </td> </tr>
+                                      
+                                
+                                   
+                                    {% endfor %}
+                                      </table>
+                                     </div>
+                                     </div>
+                            </div>
+                               
+                           
+                                           
+                                       
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                    
+                            </div>
+
+                                    </div>
+
+
+              
+                                    
+        </section>
+
+    {% endblock %}

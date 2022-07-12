@@ -1,0 +1,101 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Chercheurs{% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        {% include ":back:alert.html.twig" %}
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- start: DYNAMIC TABLE PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        liste des utilisateurs
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#"> </a>
+                            <a class="btn btn-xs btn-link panel-expand" href="#"> <i class="fa fa-resize-full"></i> </a>
+                            <a href="{{path('tuto_user_ajout')}}" > <span class="glyphicon glyphicon-plus" aria-hidden="true" > </span> </a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                
+                                <tr>
+                                  <th class="center">Nom </th>
+                                    <th class="center">Prénom</th>
+                                    <th class="center">Adresse Mail</th>
+                                    <th class="center">Username</th>
+                                    
+                                    <th class="center"> Civilité</th>
+                                    <th class="center"> Pays</th>
+                                    <th class="center">Domaine de recherche</th>
+                                    <th class="center"> Université</th>
+                                     <th class="center"> Institution</th>
+                                    <th class="center">Titre </th>
+                                    <th class="center">Image</th>
+                                    <th class="center">Role </th>
+                                    <th class="center">Etat </th>
+                                    <th class="center">Actions </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                             {% for user in users %}
+                                    {% if user.hasRole('ROLE_CHERCH') %}
+                                    <tr>
+                                         <td class="center">{{user.Nom}}</td>
+                                         <td class="center">{{user.Prenom}}</td>
+                                        <td class="center">{{user.email}}</td>
+                                        <td class="center">{{user.username}}</td>
+                                       
+                                        <td class="center">{{user.Civilite}}</td>
+                                        <td class="center">{{user.Pays}}</td>
+                                        <td class="center">{{user.Discipline}}</td>
+                                       <td class="center">{{user.Universite}}</td>
+                                       <td class="center">{{user.Institution}}</td>
+                                        <td class="center">{{user.Statut}}</td>
+                                       <td class="center"> <img  src="{{ asset(user.assetPath)}}"  height="75"></td>
+                                        <td class="center">  Chercheur </td>
+                                        <td class="center">{{user.etat}}</td>
+                                        <td class="center">
+
+                                            <a href="{{path('tuto_user_modif',{'id':user.id})}}" class="btn btn-xs btn-teal tooltips"  data-original-title="Modifier" data-placement="top"><i class="fa fa-edit"></i></a>
+                                            <a href="{{path('tuto_user_supp',{'id':user.id})}}"  class="btn btn-xs btn-bricky tooltips"  data-original-title="Supprimer" data-placement="top" onclick="javascript:return(confirm('Voulez-vous  supprimer cette ligne??'))"><i class="fa fa-times fa fa-white"></i></a>
+                                            
+
+                                    </tr>
+                                 {%endif%} {%endfor%}
+                            </tbody>
+                           
+                        </table>
+                    </div>
+                </div>
+                <!-- end: DYNAMIC TABLE PANEL -->
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+
+
+

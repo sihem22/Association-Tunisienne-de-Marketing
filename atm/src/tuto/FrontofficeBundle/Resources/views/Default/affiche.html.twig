@@ -1,0 +1,38 @@
+{% for slider in slider %}
+
+    <li data-transition="fade" data-slotamount="1" data-masterspeed="400" data-delay="5000" >
+        <img  src="{{ asset(slider.assetPath)}}"    alt="kenburns1"
+              data-kenburns="on"
+              data-bgposition="right bottom"
+              data-bgpositionend="center top"
+              data-bgfit="200"
+              data-bgfitend="100"
+              data-duration="2000"
+              data-ease="Power4.easeInOut"
+              
+              >
+
+        <a class="caption lft button orange glossy slide_btn slide_item_left" href="{{  path('front_type') }}"
+
+           data-x="0"
+           data-y="320"
+           data-speed="400"
+           data-start="3000"
+           data-easing="easeOutExpo"
+           >
+            <h1><font color="white"> <b> SOUMETTRE ICI   <span>  <i class="fa fa-download"></i></span></b></font> </h1>
+        </a>
+
+    </li>
+    <style>
+        .tp-simpleresponsive  .button.orange {
+            width: 410px;
+            height:70px;
+            background-color: #FF4500;
+           
+        }
+
+
+
+    </style>
+{%endfor%}

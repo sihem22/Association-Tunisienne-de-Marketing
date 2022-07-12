@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!-- Template Name: Clip-One - Responsive Admin Template build with Twitter Bootstrap 3.x Version: 1.4 Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <!-- start: HEAD -->
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        <!-- start: META -->
+        <meta charset="utf-8" />
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- end: META -->
+        <!-- start: MAIN CSS -->
+        <link rel="stylesheet" href="{{ asset('back/plugins/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/fonts/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/css/main-responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/iCheck/skins/all.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/perfect-scrollbar/src/perfect-scrollbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/css/theme_light.css') }}" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="{{ asset('back/css/print.css') }}" type="text/css" media="print"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('back/plugins/select2/select2.css') }}" />
+        <link rel="stylesheet" href="{{ asset('back/plugins/DataTables/media/css/DT_bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('back/plugins/ladda-bootstrap/dist/ladda-themeless.min.css') }}">
+        <link rel="stylesheet" href="{{asset('back/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/bootstrap-datetimepicker/css/datetimepicker.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/iCheck/skins/square/red.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/font-awesome-animation-master/dist/font-awesome-animation.min.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('back/plugins/iCheck/skins/square/red.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/css/bootstrap-tokenfield.css') }}" media="all" />
+
+
+
+
+
+        <!--[if IE 7]-->
+        <link rel="stylesheet" href="{{ asset('back/plugins/font-awesome/css/font-awesome-ie7.min.css') }}">
+        <![endif]-->
+        <!-- end: MAIN CSS -->
+        <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+        <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="{{ asset('back/job1.css') }}" media="all" />
+
+    </head>
+    <!-- end: HEAD -->
+    <!-- start: BODY -->
+    <body>
+        <!-- start: HEADER -->
+        {% include ':back:nav.html.twig' %}
+
+        <!-- end: HEADER -->
+        <!-- start: MAIN CONTAINER -->
+        <div class="main-container">
+            <div class="navbar-content">
+
+                <!-- start: SIDEBAR -->
+                <div class="main-navigation navbar-collapse collapse">
+
+                    <!-- start: MAIN MENU TOGGLER BUTTON -->
+                    <div class="navigation-toggler">
+                        <i class="clip-chevron-left"></i>
+                        <i class="clip-chevron-right"></i>
+                    </div>
+
+                    <!-- end: MAIN MENU TOGGLER BUTTON -->
+                    <!-- start: MAIN NAVIGATION MENU -->
+                    <ul class="main-navigation-menu">
+                        <li>
+                            <a href="{{path('tuto_backoffice_homepage')}}"><i class="fa fa-dashboard faa-vertical animated"></i>
+                                <span class="title"> Dashbroad </span><span class="selected"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)"><i class="fa fa-male faa-vertical animated"></i>
+                                <span class="title">Utilisateurs</span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="{{path('tuto_user_ajout')}}">
+                                        <i class="clip-plus-circle-2"></i>
+                                        <span class="title">Ajouter Administrateur</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_userAdmin')}}"> <i class="clip-list-6"></i>
+                                        <span class="title">Liste Administrateurs</span>
+
+                                    </a>
+                                </li>								
+                                <li>
+                                    <a href="{{path('tuto_userCherch')}}"> <i class="clip-list-6"></i>
+                                        <span class="title">Liste Chercheurs</span>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_userEval')}}"> <i class="clip-list-6"></i>
+                                        <span class="title">Liste évaluateurs</span>
+
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)" ><i class="fa fa-users faa-horizontal animated"></i>
+                                <span class="title">Membre d'org et comité  </span><i class="icon-arrow"></i><span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-group"></i>
+                                        <span class="title"> Membres de comité  </span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_membre')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Membres Scientifique </span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_membre_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+
+                                                <span class="title"> Ajouter Membre Scientifique </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)"><i class="fa fa-group"></i>
+                                        <span class="title"> Membre organisation</span><i class="icon-arrow"></i><span class="selected"></span>
+
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_membreorg')}}"> <i class="clip-list-6"></i>
+
+                                                <span class="title">Liste Membres Organisation</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_membreorg_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+                                                <span class="title">Ajouter Membre Organisation</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)" ><i class="fa fa-wrench faa-wrench animated"></i>
+                                <span class="title">Paramétrage Utilisateur  </span><i class="icon-arrow"></i><span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-globe  fa-spin"></i>
+                                        <span class="title"> Pays </span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_pays')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Pays </span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_pays_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+
+                                                <span class="title"> Ajouter Pays </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="fa fa-cog fa-spin"></i>
+                                        <span class="title"> Titre de l'utilisateur </span><i class="icon-arrow"></i>
+                                        <span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_statut')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title">Liste Titres</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_statut_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+                                                <span class="title">Ajouter Titre</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript:void(0)"><i class="fa fa-book faa-vertical animated"></i>
+                                <span class="title">Soumissions</span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-arrow-circle-down  "></i>
+                                        <span class="title"> Types Soumission</span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_type')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Types </span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_type_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+
+                                                <span class="title"> Ajouter Type </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                                                <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-arrow-circle-down  "></i>
+                                        <span class="title"> Auteurs</span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_auteur1')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Auteurs </span>
+
+                                            </a>
+                                        </li>
+                                        
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_soumission')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Soumissions des Thèses de Doctorat </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_soumission1')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Soumissions des papiers de communication</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_soumission2')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Soumissions des posters </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_soumission3')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Soumissions des études de Cas</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript:void(0)" ><i class="fa fa-arrow-circle-down faa-vertical animated"></i>
+                                <span class="title">Evaluations, Questions,Valeurs Defauts </span><i class="icon-arrow"></i><span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="{{path('tuto_evaluation')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste d'évaluations</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-question  fa-spin"></i>
+                                        <span class="title"> Questions </span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_question')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Questions </span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_question_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+
+                                                <span class="title"> Ajouter Questions </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)"><i class="fa fa-archive "></i>
+                                        <span class="title"> Valeurs Défauts</span><i class="icon-arrow"></i>
+                                        <span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_ValeursDefault')}}">
+                                                <i class="clip-list-6"></i> 
+                                                <span class="title">Liste Valeurs Défauts</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_ValeursDefault_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+                                                <span class="title">Ajouter Valeurs Défauts</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-file-image-o faa-horizontal animated"></i>
+                                <span class="title"> Evaluations final </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_evaluationfinal')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste Des évaluations final</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript:void(0)" class="active">
+                                <i class="clip-users-2 faa-horizontal animated"></i>
+
+                                <span class="title"> Evaluateurs</span>
+                                <i class="icon-arrow"></i>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_chercheur_ajout')}}">
+                                        <i class="clip-plus-circle-2"></i>
+                                        <span class="title">Ajouter un évaluateur</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_chercheur')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste d'évaluateurs</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><i class="fa fa-user-md faa-horizontal animated"></i>
+                                <span class="title"> Chercheurs </span><i class="icon-arrow"></i>
+                                <span class="selected"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="{{path('tuto_cherch')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste chercheurs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_cherch_ajout')}}">
+                                        <i class="clip-plus-circle-2"></i> 
+                                        <span class="title">Ajouter Un chercheur</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_envoie_ajout')}}">
+                                        <i class="clip-plus-circle-2"></i> 
+                                        <span class="title">Envoyer un Email</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-comments faa-vertical animated"></i>
+                                <span class="title"> Notifications  </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_notification')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste Notifications Soumission</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{path('tuto_notification1')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste Notifications Evaluations</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-phone faa-horizontal animated"></i>
+                                <span class="title"> Contactez-nous </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_contact')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste Contactes</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-image faa-horizontal animated"></i>
+                                <span class="title"> Fichiers à télécharger </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_file')}}">
+                                                <i class="clip-list-6"></i> 
+                                                <span class="title">Liste des fichiers</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_file_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+                                                <span class="title">Ajouter des fichiers</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-image faa-horizontal animated"></i>
+                                <span class="title"> Colloques précédents </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_article')}}">
+                                                <i class="clip-list-6"></i> 
+                                                <span class="title">Liste des articles</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_article_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+                                                <span class="title">Ajouter des articles</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                                 <ul class="sub-menu">
+                                <li>
+                                    <a href="javascript:void(0)" ><i class="fa fa-question  fa-spin"></i>
+                                        <span class="title"> Années</span><i class="icon-arrow"></i><span class="selected"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{path('tuto_annee')}}">
+                                                <i class="clip-list-6"></i>
+                                                <span class="title"> Liste Années </span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{path('tuto_annee_ajout')}}">
+                                                <i class="clip-plus-circle-2"></i> 
+
+                                                <span class="title"> Ajouter Année </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li></ul>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-image faa-horizontal animated"></i>
+                                <span class="title"> Slider </span><i class="icon-arrow"></i>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="{{path('tuto_slider')}}">
+                                        <i class="clip-list-6"></i>
+                                        <span class="title">Liste des images</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                    <style>
+                        .breadcrumb a {
+                            color: #080e5a;
+                        }
+
+
+
+                        ul.main-navigation-menu > li a > i {
+                            color: #252965;
+                            font-weight: normal;
+                        }
+                        .badge {
+
+                            color: #080e5a;
+
+                        }
+                        .btn-teal {
+                            background-color: #080e5a;
+                            border-color: #080e5a;
+                            color: #fcf24f;
+                        }
+                        .pagination>.active>a {
+                            color: #fcf24f;
+                            cursor: default;
+                            background-color: #080e5a;
+                            border-color: #080e5a;
+                        }
+                        a {
+                            color: #353a78;
+                            text-decoration: none;
+                        }
+                        .table thead tr {
+                            color: #080e5a;
+                            font-weight: 900;
+                        }
+                    </style>
+
+                    <!-- end: MAIN NAVIGATION MENU -->
+                </div>
+
+                <!-- end: SIDEBAR -->
+            </div>
+            <!-- start: PAGE -->
+            <div class="main-content">
+
+            {% block body %}{% endblock %}
+
+        </div>
+        <!-- end: PAGE -->
+    </div>
+
+    <!-- end: MAIN CONTAINER -->
+    <!-- start: FOOTER -->
+    {% include ':back:footer.html.twig' %}
+    <!-- end: FOOTER -->
+    <!-- start: RIGHT SIDEBAR -->
+
+    <!-- end: RIGHT SIDEBAR -->
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('back/plugins/respond.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/excanvas.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/jQuery-lib/1.10.2/jquery.min.js') }}"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="{{ asset('back/plugins/jQuery-lib/2.0.3/jquery.min.js') }}"></script>
+    <!--<![endif]-->
+    <script src="{{ asset('back/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/blockUI/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('back/plugins/iCheck/jquery.icheck.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/perfect-scrollbar/src/jquery.mousewheel.js') }}"></script>
+    <script src="{{ asset('back/plugins/perfect-scrollbar/src/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('back/plugins/less/less-1.5.0.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/jquery-cookie/jquery.cookie.js') }}"></script>
+    <script src="{{ asset('back/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js') }}"></script>
+    <script src="{{ asset('back/js/main.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('back/plugins/bootbox/bootbox.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/jquery-mockjax/jquery.mockjax.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/select2/select2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/DataTables/media/js/jquery.dataTables.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/DataTables/media/js/DT_bootstrap.js') }}"></script>
+    <script src="{{ asset('back/js/table-data.js') }}"></script>
+    <script src="{{ asset('back/plugins/ladda-bootstrap/dist/spin.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/ladda-bootstrap/dist/ladda.min.js') }}"></script>
+    <script src="{{ asset('back/js/ui-buttons.js') }}"></script>
+    <script src="{{ asset('back/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('back/js/locales/bootstrap-datetimepicker.pt-BR.js') }}"></script>            
+    <script src="{{ asset('back/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/summernote/build/summernote.min.js') }}"></script>
+    <script src="{{ asset('back/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('back/plugins/ckeditor/adapters/jquery.js') }}"></script>
+    <script src="{{ asset('back/js/form-validation.js') }}"></script>
+    <script src="{{ asset('back/plugins/iCheck/jquery.icheck.js') }}"></script>
+    <script src="{{ asset('back/js/bootstrap-tokenfield.js') }}"></script>
+    <script src="{{ asset('js/auteurs.js') }}"></script>
+
+
+
+
+
+
+    <script src="{{ asset('back/plugins/jQuery-Knob/js/jquery.knob.js') }}"></script> 
+
+    <script src="{{ asset('back/plugins/Hightcharts/js/highcharts.js') }}"></script> 
+    <script src="{{ asset('back/plugins/Hightcharts/js/modules/exporting.js') }}"></script>
+    <script src="{{ asset('back/plugins/Hightcharts/js/highcharts-3d.js') }}"></script> 
+
+
+
+
+
+
+
+
+    <script>
+
+        $(function () {
+            $('#container1').highcharts({
+                chart: {
+                    type: 'column',
+                    options3d: {
+                        enabled: true,
+                        alpha: 7,
+                        beta: 23,
+                        depth: 50
+                    }
+                },
+                title: {
+                    text: 'Nombre de Soumission par type'
+                },
+                subtitle: {
+                },
+                plotOptions: {
+                    column: {
+                        depth: 25
+                    }
+                },
+                xAxis: {
+                    categories: ['Avancement des thèses de doctorat', 'soumission de communication', 'Etude de cas', 'Poster']
+                },
+                yAxis: {
+                    title: {
+                        text: null
+                    }
+                },
+                series: [{
+                        name: 'Soumissions',
+                        data: [{{ render (controller('tutoBackofficeBundle:Dashbroad:script')) }}]
+                    }]
+            });
+        });
+    </script>
+    <script>
+
+        jQuery(document).ready(function () {
+            Main.init();
+            TableData.init();
+            UIButtons.init();
+            FormValidator.init();
+
+
+
+
+        });
+    </script>
+    <script>
+        $("#hide1").click(function () {
+            $(".badge").hide();
+        });
+    </script>
+
+    <script>
+        $("#hide2").click(function () {
+            $(".badge").hide();
+        });
+    </script>
+    <script type="text/javascript">
+        $('#tokenfield').tokenfield({
+            autocomplete: {
+                source: [],
+                delay: 100
+            },
+            showAutocompleteOnFocus: true
+        })
+
+    </script>
+    <script type="text/javascript">
+        $('#tokenfield1').tokenfield({
+            autocomplete: {
+                source: [],
+                delay: 100
+            },
+            showAutocompleteOnFocus: true
+        })
+
+    </script>
+
+
+
+
+
+</body>
+<!-- end: BODY -->
+</html>

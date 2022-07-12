@@ -1,0 +1,61 @@
+{% extends ":front:Fronten.html.twig" %}
+{% block title %}Profile{% endblock  %}
+{% block body %}
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        <div class="icon-box-content">
+
+
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profilen.html.twig' %}
+                            {%else%}
+                                {% include ':front:ProfilChercheuren.html.twig' %}
+                            {%endif%}  
+
+
+                            <h2><font color='#0d0b6f'><b>Welcome {{app.user}}! </b></font></h2>
+                            {% trans_default_domain 'FOSUserBundle' %}
+
+
+                            <div class="fos_user_user_show"> {% include ":back:alert.html.twig" %}
+
+                                <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                                    <tr>
+                                        <th class="left"><h3><b>{{ 'profile.show.username'|trans }}: </b></h3></th>
+                                        <td class="left"><h3> {{ user.username }}</h3></td>  </tr>
+                                    <tr><th class="left"><h3><b>Last name:</b></h3></th>
+                                        <td class="left"> <h3>{{ user.Nom }}</h3></td> </tr>
+                                    <tr><th class="left"><h3><b>First name:</b></h3></th>
+                                        <td class="left"><h3> {{ user.Prenom }}</h3></td> </tr>
+                                    <tr> <th class="left"> <h3><b>{{ 'profile.show.email'|trans }}:</h3></b> </th>
+                                        <td class="left"><h3>{{ user.email }}</h3></td> </tr>
+                                    <tr><th class="left"><h3><b>Gender:</b> </h3></th>
+                                        <td class="left"><h3>{{ user.Civilite }}</h3></td> </tr>
+                                    <tr> <th class="left"><h3><b>Country:</b></h3></th>
+                                        <td class="left"><h3>{{ user.Pays }}</h3></td> </tr>
+
+                                    <tr><th class="left"><h3><b>Field of research:
+</h3></b></th>
+                                        <td class="left"> <h3>{{ user.Discipline }}</h3></td> </tr>
+                                    <tr> <th class="left"><h3><b>University: </h3> </b></th>
+                                        <td class="left"><h3>{{ user.Universite }} </h3></td> </tr>
+                                    <tr> <th class="left"><h3><b>Institution: </b></h3></th>
+                                        <td class="left"><h3>{{ user.Institution }}</h3> </td> </tr>
+                                    <tr>   <th class="left"><h3><b>Title: </h3> </b></th>
+                                        <td class="left"><h3>{{ user.Statut }}</h3></td>
+                                    </tr>
+                                    <style>
+                                        
+                                        
+
+                                        .h3{
+                                            color: #222;
+                                        }
+                                    </style>                              </table> </p>
+                            </div></div></div></div></div></div></section>
+{%endblock %}

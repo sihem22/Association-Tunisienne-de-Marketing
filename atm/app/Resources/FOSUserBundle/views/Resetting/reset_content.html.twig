@@ -1,0 +1,47 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}Réinitialiser le mot de passe
+{% endblock  %}
+{% block body %}
+
+    <section class="wrapper">
+        <div class="container">
+
+            <div class="row animate-group">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <i class="icon-box-icon fa fa-pencil"></i>
+                        {% trans_default_domain 'FOSUserBundle' %}
+
+                        {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+                        {{ form_widget(form) }}
+                        <br>
+                        <div>
+                            <input type="submit" type="submit" class="btn btn-blue btn-lg" value="{{ 'resetting.reset.submit'|trans }}" />
+                        </div>
+                        {{ form_end(form) }}
+                        <style>
+
+
+                            textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                font-size: 14px;
+
+                                padding: 10px 10px;
+
+                                width:  700px ;
+                                margin-top: 10px;
+                                display: flow-root;}
+                           
+
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

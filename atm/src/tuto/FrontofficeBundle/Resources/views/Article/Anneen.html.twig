@@ -1,0 +1,62 @@
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Previous Symposia By year{% endblock  %}
+{% block body %}
+      
+  
+     
+         
+  
+        <div class="container">
+						
+
+  <section class="wrapper" >
+       
+          {{ render (controller('tutoFrontofficeBundle:Article:recherchetten'))}}
+           <
+            <div class="row animate-group">
+                <div class="col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                    
+                        <div class="icon-box-content">
+                            <div align='left'>
+
+                                <p><font size="5">More than 1,000 papers have been published in the ATM conference proceedings. You have free access to all the papers of the conference in a PDF format.</p><br>
+                    <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                    <th class="center">Year</th>
+
+                                   
+                                     </tr>
+                            </thead>
+                            <tbody>
+                            {% for annee in annee %}
+                                    <tr>
+                                        <td class="center"><a href="{{path('tuto_affiche1en',{'id':annee.id})}}">{{annee.libelle}}</a></td>
+
+                                        
+                                         </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                                <p><font size="5">All papers presented at the ATM Symposia since 2003 until the last edition of 2016 are available on the website and can be downloaded free of charge in PDF format. You click on year, then you see the list of communications and finally <font color='red'>you click</font> on the PDF icon in front of the desired communication.
+
+
+  <p>Quotation of a paper presented at the ATM Symposium:
+</p>
+  <p>To quote a paper presented at an ATM Symposium, you should follow the following structure:
+</p>
+  <p>Author (s) (year), "Titre du papier", Proceedings of the International Symposium of the Tunisian Marketing Association, date, city, [valid at www. www. ATM-colloque.com/colloquesprecedents]
+ </p>
+  <p><b>Example :</b></p>  
+  <p><b>Chérif E. and Lemoine JF (2014)</b>, The influence of the virtual counselor's type of voice on social presence, confidence in the virtual counselor, confidence in the site and behavioral intentions, XXXth International Association of French Association Of Marketing (AFM), 15 and 16 May, Montpellier, [valid at https://www.afm-marketing.com/en/system/files/publications/20160517000049_CHERIF_LEMOINE.pdf]</p>
+
+ </div>
+                    </div>
+    </div>
+                </div></div>
+</section>
+	</div>
+
+{%endblock%}

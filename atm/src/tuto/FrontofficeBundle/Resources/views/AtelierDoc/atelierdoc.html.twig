@@ -1,0 +1,142 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}Ateliers Doctoraux{% endblock  %}
+{% block body %}
+
+
+
+    <div class="container">
+						
+
+  <section class="wrapper" >
+        <div class="container">
+          
+           
+            <div class="row animate-group">
+                <div class="col-sm-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                    
+                        <div class="icon-box-content">
+                            <div align='left'>
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                <div align='justify'>
+                                <h2 id="atelier" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>1.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atelier doctoral ATMC</b></font></h2>
+
+
+                                <h3><p>L’atelier doctoral du colloque invite les doctorants ayant réalisé un avancement considérable dans leurs thèses à discuter leurs travaux au cours d’une présentation de 40 minutes en présence d’un panel de 8 à 10 d’éminents académiciens. </p>
+                                    <p>L’atelier doctoral de l’ATM est un cadre de rencontre international et convivial. Il s’agit d’une opportunité  unique pour raffiner ses questions de recherche, publier ses travaux, bénéficier des conseils précieux des professeurs afin de mieux définir les directions potentielles de recherche.</p>
+                                    <p>Au cours de l’atelier doctoral, chaque participant aura 15 minutes pour présenter son travail (un maximum de 15 diapositives) en français ou en anglais et discuter son travail avec l’ensemble des chercheurs présents. </p>
+                                    <p>A l’issue de leur présentation, les étudiants bénéficieront de commentaires et de suggestions sur leur recherche, effectués par un groupe de chercheurs confirmés. Ils recevront aussi des commentaires et avis de leurs homologues.</p></h3>
+
+                                <h2 id="soumission" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>2.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Soumission pour l’atelier doctoral</b></font></h2>
+
+
+                                <h3><p><b>Afin de soumettre sa proposition d’avancement de thèse pour l’atelier doctoral, veuillez suivre les instructions suivantes: </b></p>
+                                    <p>  <i class="fa fa-file-text-o"></i>&nbsp; <b><a href="{{  path('front_soumettre') }}">Cliquer-ici</a></b> et lire attentivement les règles de soumission à l’atelier doctoral de l’ATM avant d’entamer la procédure de soumission</p>
+                                    <p>  <i class="fa fa-file-text-o"></i>&nbsp;<b> <a href="{{  path('tuto_soumission_ajout') }}">Cliquer-ici</a></b> pour soumettre à l’atelier doctoral de l’ATM </p>
+                                    <p> <i class="fa fa-file-text-o"></i>&nbsp;Un accusé de réception sera adressé par retour email</p></h3>
+
+                                <h2 id="objectifs" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>3.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les objectifs du colloque doctoral</b></font></h2>
+                               
+                                <h3> <p><b>L’objectif du colloque doctoral est de :</b></p>
+                                      <p><i class="fa fa-check-circle-o"></i>&nbsp;Favoriser le développement d’une recherche doctorale de qualité au sein de la communauté</p>
+                                    <p><i class="fa fa-check-circle-o"></i>&nbsp;Permettre aux doctorants en marketing de discuter leurs travaux de recherche avec des professeurs expérimentés dans l’encadrement de thésards </p> 
+                                    <p><i class="fa fa-check-circle-o"></i>&nbsp;Partager leurs préoccupations de recherche avec leurs pairs </p> 
+                                    <p><i class="fa fa-check-circle-o"></i>&nbsp;Bénéficier de regards extérieurs, complémentaires à ceux de leur directeur de thèse</p>  
+                                <p><i class="fa fa-check-circle-o"></i>&nbsp;Echanger avec des seniors et des juniors de la recherche en marketing</p> </h3>
+                                <br>
+                                <h3>  <p><b>Le colloque s’adresse à différents profils d’étudiants:</b></p>
+                                     <p><i class="fa fa-check-circle-o"></i>&nbsp;Les étudiants qui ont atteint un stade intermédiaire d’avancement de leur recherche, Le sujet et le plan de recherche doivent être ainsi stabilisés et présentés en détails sans risque d’être modifié ultérieurement</p> 
+                                <p><i class="fa fa-check-circle-o"></i>&nbsp;Les étudiants à un stade moins avancé de développement de leur recherche, où le sujet, la problématique de recherche, le cadre conceptuel et le modèle de recherche nécessitent d’être mieux définis et stabilisés</p> 
+
+                               <p>Ce colloque doctoral doit donc être vu comme un dispositif d’aide et de soutien aux doctorants, L’apport attendu est d’ordre théorique (conceptuel) et/ou d’ordre méthodologique</p></h3>
+
+
+                                <h2 id="choix" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>4.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le choix d’un type de profil</b></font></h2>
+
+                                <h3><p>L’atelier doctoral est ouvert à tous les doctorants qui n’ont pas encore déposé leurs thèses. La sélection sera effectuée par le Comité Scientifique sur la base d’unesynthèse de 15 pages (hors annexes et bibliographie) décrivant de façon claire le travail de recherche envisagé (voir <b><a href="{{path('front_doctoral')}}"> FICHE DE STYLE AVANCEMENT DE THESE ATMC)</a> </b></p>
+
+                                    <p>Les candidats retenus feront parvenir avant le colloque  une mise à jour de l’avancement de leurs thèses tenant compte des remarques des évaluateurs et de l’évolution de leur travail, afin de discuter sur la base de propositions actualisées</p></h3>
+
+                               
+                                <h3>  <p><b>Délais et envoi de la candidature:</b><br>Les étudiants qui désirent présenter leur recherche doivent soumettre pour évaluation, par voie électronique, un résumé de 15 pages maximum avant le <b>01décembre 2017</b> (date limite de réception), en suivant les instructions de soumission sur le site  <a href='https://www.atm-colloque.com/'>https://www.atm-colloque.com/</a></p></h3>
+
+
+                                <h2 id="session" class="title"  style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>5.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sessions de formation</b></font></h2>
+
+                                <h3><p>Les doctorants ainsi que les chercheurs bénéficieront, de trois séances plénières, ouvertes à l’ensemble des participants sur des thèmes liés aux aspects méthodologiques et d’analyses des données. Ces séances auront lieu le vendredi et samedi. </p></h3>
+
+                                <h2 id="calendrier" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>6.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calendrier détaillé</b></font></h2>
+
+
+
+                                <h3><p><b>Date limite de réception :</b></p>01 Décembre 2017</h3>
+
+
+                                <h2 id="regle" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>7.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Règles de présentation des papiers :</b></font></h2>
+
+
+                                <h3><p>Les règles de style à respecter sont indiquées sur le site ATM (voir <b><a  href="{{  path('front_communication') }}">FICHE DE STYLE PRESENTATION COMMUNICATION PPT</a></b>).</p>
+
+                                    <b>La présentation</b> de 15 pages maximum. </h3>
+
+
+                                <h2 id="frais" class="title" style="background : rgba(255, 143, 0, 0.24) ;"><font color="#212358"><b><i>8.</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les frais d’inscription</b></font></h2>
+
+
+                                <h3><p>L’inscription à  l’atelier doctoral pour les doctorants est de 200 dinars  (voir plus de détail: <b><a  href="{{  path('front_hotel') }}">cliquer ici</a></b>). Cette inscription couvre les frais de logement de la nuit du 06 au 07 avril 2018, les documents, les repas et les pauses. </p></h3><br><br>
+
+
+                                </div></div>
+                    </div>
+    </div>
+                </div></div>
+</section>
+	</div>
+                <style>
+                    /* WHAT YOU NEED */
+                    .fading-side-menu.affix-top {
+                        opacity: 1;
+                        transition: opacity 1s
+                    }
+                    .fading-side-menu.affix {
+                        top: 11.5px;
+                    }
+                    .fading-side-menu.affix {
+                        opacity: 0.2;
+                        transition: opacity 5s
+                    }
+                    .fading-side-menu.affix:hover {
+                        opacity: 1;
+                        transition: opacity 0.3s
+                    }
+                    .fading-side-menu a {
+                        color: rgb(102, 102, 102);
+                    }
+                    .fading-side-menu a .fa {
+                        padding-right:15px;
+                    }
+                    hr { 
+                        border : 0;
+                        height: 10px; 
+                        background-image: linear-gradient(to right, rgb(252, 239, 71), rgb(52, 53, 109),rgb(252, 239, 71));
+                    }
+
+
+
+
+
+
+
+
+                    body {
+                        color: #000000;
+                        font-family: cambria;}
+
+                    i {
+                        color: #131658;
+                    }
+
+                </style>
+
+            {% endblock %}

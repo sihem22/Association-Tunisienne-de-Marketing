@@ -1,0 +1,143 @@
+{% extends ":front:Front.html.twig" %}
+
+{% block title %}Soumission{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profil.html.twig' %}
+                            {%else%}
+                                {% if is_granted('ROLE_CHERCH') %}
+                                    {% include ':front:ProfilChercheur.html.twig' %}
+                            {%endif%}{%endif%}
+
+                            <h1 align="left" class="icon-box-title">
+                                <b> <font color='#0d0b6f' >Déposer votre Papier </font></b></h1><br><br>
+                            
+                           
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+
+                                        {% include ":back:alert.html.twig" %}
+
+                                        {{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+
+
+
+
+
+
+
+                                        <style>
+                                            .required:after { content:" *";
+                                                              color:red; }
+                                            </style>
+
+                                            <div class="row">
+                                            {{ form_row(form.titrePapier, { 'label': 'Titre du papier :' ,'disabled':'true','attr':{'placeholder':'Saisir le titre de votre papier '}}) }}
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="row">
+                                            {{ form_row(form.resume, { 'label': 'Résumé :' ,'disabled':'true','attr':{'placeholder':'Saisir le resume de votre papier '}}) }}
+
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            {{ form_row(form.motcle, { 'id': 'tokenfield','disabled':'true','label': 'Mots Clés :' }) }}
+
+                                        </div>
+
+                                        <br>
+                                        <div class="row">
+
+                                            {{ form_row(form.file1 ,{ 'label': 'Cover letter :' ,'disabled':'true','attr':{'placeholder':'telecharger votre Cover letter '}}) }}
+                                        </div>
+
+                                        <br>
+                                        <div class="row">
+
+                                            {{ form_row(form.file2 ,{ 'label': 'Manuscript :' ,'disabled':'true','attr':{'placeholder':'Saisir votre manuscript '}}) }}
+                                        </div>
+                                        <br>
+                                        <h3>Auteurs</h3>
+                                     <!--  <ul class="auteurs" data-prototype="{{ form_widget(form.auteurs.vars.prototype)|e }}"> 
+            {% for auteur in form.auteurs %}
+                <li>{{ form_row(auteur.name) }}</li>
+
+            {% endfor %}
+        </ul> -->
+                                            <br>
+                                        <div class="hidden">
+                                            {{ form_rest(form) }}
+                                        </div>
+
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="button orange glossy  btn-lg" disabled="true"><h3><font color="white"><b>Enregistrer</b></font></h3></button> <b><font color="red">  Champ obligatoire *  </font></b>
+                                            </div></div>
+
+  <style>
+                         .button.orange {
+                            width: 170px;
+                            height:70px;
+                            background-color: #FF4500;
+                          
+                        }
+                       
+
+
+                    </style>
+                    <style>
+                            textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                                font-size: 14px;
+
+                                padding: 10px 10px;
+
+                                width: 600px ;
+                                margin-top: 10px;
+                                display: flow-root;}
+                            select {
+
+                                width:300px;
+                                padding: 15px;
+
+                            }
+
+
+                        </style>
+
+                                        <!-- END FORM-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+                                        
+    </section>
+
+{% endblock %}

@@ -1,0 +1,163 @@
+<form method="post" class="navbar-form navbar-right" action="{{ path('tuto_recherchett') }}">
+
+    {% set name1="motcle1_" %}
+    <input type="text" class="form-control" name="{{name1}}" placeholder="Search by titlee" >
+    {% set name2="motcle2_" %}
+    <input type="text" class="form-control" name="{{name2}}" placeholder="Search by type" >
+    {% set name3="motcle3_" %}
+    <input type="text" class="form-control" name="{{name3}}" placeholder="Search by year" >
+    {% set name4="motcle4_" %}
+    <input type="text" class="form-control" name="{{name4}}" placeholder="Search by keyword" >
+
+
+
+            &nbsp;&nbsp;<button type="submit" class="button orange glossy  btn-lg"><font color="white">Search</font></button> 
+    
+
+    <style>
+        .button.orange {
+            width: 140px;
+            height:45px;
+            background-color: #FF4500;
+
+        }
+
+
+
+    </style>
+
+</form>
+
+
+
+
+{# <h3 align="left" class="icon-box-title">
+ </h3>#}
+{% set name1="motcle1_" %}
+<div class="icon-box-content">  
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+
+            {% for article1 in articles1 %}
+
+
+
+
+                <div align="left" >
+
+                    <font color="black">  <b style=" font-weight:900;">  Article Title:  </b> </font>  {{article1.titre}} 
+                    <br>
+                    <font color="black">  <b style=" font-weight:900;">  Keywords:  </b> </font>  {{article1.motcle}} 
+                    <br>
+                    <font color="black">   <b style=" font-weight:900;">   The article: </b> </font><br><object data="{{ asset(article1.assetPath)}}"  type="application/pdf" width="25%" height="25%"  >
+
+                    </object>
+                    <p><a href="{{ asset(article1.assetPath)}}">click here to download the PDF file.</a> </p>
+                    <br>
+                     <font color="black">   <b style=" font-weight:900;">   Authors: </b> </font> {{article1.auteurs}} 
+                        <br>
+                </div>
+
+            </div></div>  
+
+
+
+    {%endfor%}
+    {% set name2="motcle2_" %}
+    <div class="icon-box-content">  
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                {% for article2 in articles2 %}
+
+
+
+
+                    <div align="left" >
+
+                        <font color="black">  <b style=" font-weight:900;">   Article Title:   </b> </font>  {{article2.titre}} 
+                        <br>
+                        <font color="black">  <b style=" font-weight:900;">  Keywords:  </b> </font>  {{article2.motcle}} 
+                        <br>
+                        <font color="black">   <b style=" font-weight:900;">   The article: </b> </font><br><object data="{{ asset(article2.assetPath)}}"  type="application/pdf" width="25%" height="25%"  >
+
+                        </object>
+                        <p><a href="{{ asset(article2.assetPath)}}">click here to download the PDF file.</a> </p>
+                        <br>
+                     <font color="black">   <b style=" font-weight:900;">   Authors : </b> </font> {{article2.auteurs}} 
+                        <br>
+                    </div>
+
+
+
+
+                {%endfor%} </div></div></div>
+                {% set name3="motcle3_" %}
+    <div class="icon-box-content">  
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                {% for article3 in articles3 %}
+
+
+
+
+                    <div align="left" >
+
+                        <font color="black">  <b style=" font-weight:900;">   Article Title:   </b> </font>  {{article3.titre}} 
+                        <br>
+                        <font color="black">  <b style=" font-weight:900;">  Keywords:  </b> </font>  {{article3.motcle}} 
+                        <br>
+                        <font color="black">   <b style=" font-weight:900;">   The article: </b> </font><br><object data="{{ asset(article3.assetPath)}}"  type="application/pdf" width="25%" height="25%"  >
+
+                        </object>
+                        <p><a href="{{ asset(article3.assetPath)}}">click here to download the PDF file.</a> </p>
+                        <br>
+                     <font color="black">   <b style=" font-weight:900;">   Authors : </b> </font> {{article3.auteurs}} 
+                        <br>
+                    </div>
+
+
+
+
+                {%endfor%}
+            </div></div></div>
+            {% set name4="motcle4_" %}
+    <div class="icon-box-content">  
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+
+                {% for article4 in articles4 %}
+
+
+
+
+                    <div align="left" >
+
+                        <font color="black">  <b style=" font-weight:900;">   Article Title:  </b> </font>  {{article4.titre}} 
+                        <br>
+                        <font color="black">  <b style=" font-weight:900;"> Keywords:  </b> </font>  {{article4.motcle}} 
+                        <br>
+                        <font color="black">   <b style=" font-weight:900;">  The article: </b> </font><br><object data="{{ asset(article4.assetPath)}}"  type="application/pdf" width="25%" height="25%"  >
+
+                        </object>
+                        <p><a href="{{ asset(article4.assetPath)}}">click here to download the PDF file.</a> </p>
+                        <br>
+                     <font color="black">   <b style=" font-weight:900;">   Authors : </b> </font> {{article4.auteurs}} 
+                        <br>
+                    </div>
+
+
+
+
+                {%endfor%}
+
+            </div></div></div>
+
+
+
+
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- Template Name: Clip-One - Frontend | Build with Twitter Bootstrap 3 | Version: 1.5 | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- start: HEAD -->
+    <head>
+        <title>{% block title %} Welcome! ATM{% endblock %}</title>
+
+        <!-- start: META -->
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+
+        <!-- end: META -->
+        <!-- start: MAIN CSS -->
+        <link href="{{ asset('front/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="{{ asset('front/plugins/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/fonts/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/animate.css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/css/main-responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/css/theme_blue.css') }}" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="{{ asset('back/plugins/iCheck/skins/square/red.css') }}">
+        <link rel="stylesheet" href="{{ asset('back/plugins/iCheck/skins/all.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/ladda-bootstrap/dist/ladda-themeless.min.css') }}">
+
+        <!-- end: MAIN CSS -->
+        <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+        <link rel="stylesheet" href="{{ asset('front/plugins/revolution_slider/rs-plugin/css/settings.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/flex-slider/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/plugins/colorbox/example2/colorbox.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/front.css') }}" media="all" />
+
+
+
+
+
+        <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+        <!-- start: HTML5SHIV FOR IE8 -->
+        <!--[if lt IE 9]>
+        <script src="{{ asset('front/plugins/html5shiv.js') }}"></script>
+        <![endif]-->
+        <!-- end: HTML5SHIV FOR IE8 -->
+    </head>
+    <!-- end: HEAD -->
+    <body>
+        <!-- start: HEADER -->
+        <header>
+            <!-- start: SLIDING BAR (SB) -->
+            <div id="slidingbar-area">
+                <div id="slidingbar">
+                    <!-- start: SLIDING BAR FIRST COLUMN -->
+                    <div class="col-md-5 col-sm-4">
+                        <h2><strong style="font-family:arial;font-size:120%;">About </strong> </h2>
+                        <p>
+                            <b>ATM is an accesible space for everyone, that offers you the opportunity of meeting other marketing professors from all tunisian and foregnien universities, Added to that it creates a strong bound beetween universities and professionals in the marketing domain. </b>
+
+                        </p>
+                    </div>
+                    <!-- end: SLIDING BAR FIRST COLUMN -->
+                    <!-- start: SLIDING BAR SECOND COLUMN -->
+                    <!-- end: SLIDING BAR second COLUMN -->
+                    <!-- start: SLIDING BAR THIRD COLUMN -->
+                    <div class="col-md-5 col-sm-4">
+                        <h2><strong style="font-family:arial;font-size:120%;">ADRESSE</strong></h2>
+                        <address class="margin-bottom-40">
+                            <b>University Tunis El Manar, Farhat Hached<br> B.P. n° 94 - ROMMANA - Tunis<br>1068 Faculté des Sciences Economiques et de Gestion de Tunis,<br> B.P 248 2092</b><br>
+                            
+                        </address>
+                    </div>
+                    <!-- end: SLIDING BAR THIRD COLUMN -->
+                </div>
+                <!-- start: SLIDING BAR TOGGLE BUTTON -->
+                <a href="#" class="sb_toggle">
+                </a>
+                <!-- end: SLIDING BAR TOGGLE BUTTON -->
+            </div>
+            <!-- end: SLIDING BAR -->
+            <!-- start: TOP BAR -->
+            <div class="clearfix " id="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- start: TOP BAR CALL US -->
+                            <div class="callus">
+                                <img style="width: 80px;height: 35px;"  alt="" src="{{ asset('front/images/flag.GIF') }}">
+                               <b> Contact Us: GSM : (+216) 71 870 277 - Web Site:</b>
+                                <a href="www.fsegt.rnu.tn ">
+                                 <b>  www.fsegt.rnu.tn </b>
+                                </a>
+                            </div>
+                            <!-- end: TOP BAR CALL US -->
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- start: TOP BAR SOCIAL ICONS -->
+                            <div class="social-icons">
+                                <ul>
+                                    
+
+                                    <li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
+                                        <a target="_blank" href="https://www.facebook.com/groups/AssociationTunisienneDeMarketing/">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
+                                    <a target="_blank" href="http://www.twitter.com">
+                                        Twitter
+                                    </a>
+                                </li>
+                                <li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
+                                    <a target="_blank" href="http://linkedin.com" data-original-title="LinkedIn">
+                                        LinkedIn
+                                    </a>
+                                </li>
+       
+                                    <li>
+                                    <button type="submit"><img style="width: 30px;height: 30px;" src="{{ asset('front/images/fr.png') }}"><b>FR</b> <a href="{{  path('tuto_frontoffice_homepage') }}" ></a></button>
+                                    </li>
+                                        <style>
+                                            .button {
+                                                padding: 1px 10px;
+                                                font-size: 18px;
+                                                line-height: 1.5;
+                                                border-radius: 3px;
+                                            }
+                                        </style>
+
+
+                                </ul>
+                            </div>
+                            <!-- end: TOP BAR SOCIAL ICONS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: TOP BAR -->
+            {% include ':front:naven.html.twig' %}
+        </div>
+    </header>
+    <!-- end: HEADER -->
+    <!-- start: MAIN CONTAINER -->
+    {% if app.request.get('_route') != 'frontoffice_homepageen'  %}
+        <section class="page-top">
+            <div class="container">
+                <div class="col-md-4 col-sm-4">
+                    <h1><b>{{ block('title') }}</b></h1>
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <ul class="pull-right breadcrumb">
+                        <li>
+                            <a href="{{  path('frontoffice_homepageen') }}">
+                                Home
+                            </a>
+                        </li>
+                        <li class="active">
+                            {{ block('title') }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    {%endif%}
+    {% block body %}
+    {% endblock %}
+    <!-- end: MAIN CONTAINER -->
+    {% include ':front:footer.html.twig' %}
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('front/plugins/respond.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/excanvas.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/html5shiv.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('front/plugins/jQuery-lib/1.10.2/jquery.min.js') }}"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="{{ asset('front/plugins/jQuery-lib/2.0.3/jquery.min.js') }}"></script>
+    <!--<![endif]-->
+    <script src="{{ asset('front/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/jquery.transit/jquery.transit.js') }}"></script>
+    <script src="{{ asset('front/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/jquery.appear/jquery.appear.js') }}"></script>
+    <script src="{{ asset('front/plugins/blockUI/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('front/plugins/jquery-cookie/jquery.cookie.js') }}"></script>
+    <script src="{{ asset('front/js/main.js') }}"></script>
+    <script src="{{ asset('front/plugins/iCheck/jquery.icheck.js') }}"></script>
+    <script src="{{ asset('front/plugins/iCheck/jquery.icheck.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/ladda-bootstrap/dist/spin.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/ladda-bootstrap/dist/ladda.min.js') }}"></script>
+    <script src="{{ asset('front/js/ui-buttons.js') }}"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script src="{{ asset('front/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/flex-slider/jquery.flexslider.js') }}"></script>
+    <script src="{{ asset('front/plugins/stellar.js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/colorbox/jquery.colorbox-min.js') }}"></script>
+    <script src="{{ asset('front/js/index.js') }}"></script>
+    <script src="{{ asset('front/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('front/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js') }}"></script>
+    <script src="{{ asset('front/js/form-wizard.js') }}"></script>
+
+
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            Index.init();
+            $.stellar();
+            UIButtons.init();
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-aero',
+                radioClass: 'iradio_square-aero',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Notification{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                            {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                                {% include ':front:profilen.html.twig' %}
+                            {%else%}
+                                {% if is_granted('ROLE_CHERCH') %}
+                                {% include ':front:ProfilChercheuren.html.twig' %}
+                            {%endif%}{%endif%}
+
+                            <div class="horizontal-form margin-bottom-40">
+                                 <h1 align="left" class="icon-box-title">
+                                     <b> <font color='#0d0b6f' >  All notifications  </font></b></h1><br><br>
+          
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+
+                                        {% for notification in notifications %}
+
+
+                                            {% if notification.evaluationfinal== null %}
+
+
+
+                                                <div align="left">  <b><font color="black"> You received a paper !!!</font></b> <br>
+
+                                                    Date: {{notification.dateNotif|date('d/m/Y')}}</div>
+
+                                                <div class="right"><a href="{{ path('front_Succesen',{'id':notification.soumission.id ,'notifId':notification.id}) }}"> cliquez ici </a></div><br>
+
+
+                                            {%endif%} 
+
+                                            {% if notification.evaluationfinal!=null %}
+                                                {% if notification.evaluationfinal.etat.id=="6"%}
+
+
+                                                    <div align="left"> <font color="black"> <b>  You have received your evaluation !!!</b> </font>   <br>
+                                                        Date: {{notification.dateNotif|date('d/m/Y')}}</a>  
+                                                        <div class="right"><a href="{{ path('front_repEvaluation',{'soumission':notification.soumission.id ,'id':notification.evaluationfinal.id,'notifId':notification.id})}}"> cliquez ici</a> </div><br>
+                                                    {%endif%} 
+                                                {%endif%} 
+
+
+
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+
+{% endblock %}

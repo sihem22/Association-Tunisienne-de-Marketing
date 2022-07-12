@@ -1,0 +1,11 @@
+{%for user in user%}
+    {% if user.path is null %}
+        {% if is_granted('ROLE_EVAL') %}
+             <img class="thumbnail" style="width: 200px;height: 200px;"  alt="" src="{{ asset('front/images/defaut.png') }}"> {%endif%}
+             {% if is_granted('ROLE_CHERCH') %}
+   <img class="thumbnail" style="width: 200px;height: 200px;"  alt="" src="{{ asset('front/images/defaut.png') }}">{%endif%}
+   {% if is_granted('ROLE_ADMIN') %}
+   <img class="thumbnail" style="width: 200px;height: 200px;"  alt="" src="{{ asset('front/images/defaut.png') }}">{%endif%}
+    {%else%}
+ <img class="thumbnail" src="{{ asset(user.assetPath)}}" style="width: 200px;height: 250px;" >{%endif%}
+ {%endfor%}

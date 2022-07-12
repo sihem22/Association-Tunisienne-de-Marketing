@@ -1,0 +1,35 @@
+
+{% extends ":back:base.html.twig" %}
+{% block title %}Map {% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+           <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="clip-home-2"></i>
+                        <a href="{{path('tuto_frontoffice_homepage')}}">
+                            Front Office
+                        </a>
+                    </li>
+                    <li class="active">
+                        <i><b>  Back Office </b> </i>
+                    </li>
+                    
+                </ol>
+            </div>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zuiTB_WIy9L1GnMKGeGgu3C87xU" width="640" height="480"></iframe>
+        </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+ 
+
+   {% endblock  %}

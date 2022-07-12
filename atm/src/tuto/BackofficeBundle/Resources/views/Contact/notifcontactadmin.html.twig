@@ -1,0 +1,4 @@
+{% for contact in contacts|reverse %}
+<a href="{{ path('tuto_contact') }}"><i class="clip-notification-2"></i>Vous avez un message en attente<br>
+La date du message  :{{contact.dateModif|date('d/m/Y')}} 
+{% endfor %}

@@ -1,0 +1,44 @@
+# app/config/security.yml
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_EVAL:       ROLE_USER
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_CHERCH:       ROLE_USER
+       
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username_email
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
+            logout:       true
+            anonymous:    true
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/soumission/, role: ROLE_USER }
+        - { path: ^/soumission1/, role: ROLE_USER }
+        - { path: ^/soumission2/, role: ROLE_USER }
+        - { path: ^/soumission3/, role: ROLE_USER }
+        - { path: ^/soumission_succes/, role: ROLE_USER }
+        - { path: ^/soumission_succes1/, role: ROLE_USER }
+        - { path: ^/evaluationEnvoyees/, role: ROLE_EVAL }
+        - { path: ^/evalreponses/, role: ROLE_USER }
+        - { path: ^/Questionnaire/, role: ROLE_EVAL }
+        - { path: ^/video2/, role: ROLE_USER }
+        - { path: ^/video3/, role: ROLE_EVAL }
+        - { path: ^/video3/, role: ROLE_ADMIN }
+       
+        - { path: ^/soumission_type, role: ROLE_USER }
+       

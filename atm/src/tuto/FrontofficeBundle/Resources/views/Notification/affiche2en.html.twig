@@ -1,0 +1,59 @@
+
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Evaluations sent{% endblock  %}
+{% block body %}
+
+    <section class="wrapper" style="min-height: 400px; background-image: url(&quot;/pfe/web/font/images/photodune-4043508-3d-modern-office-room-l.jpg&quot;); background-position: 0px -143.517px;" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="-750">
+        <div class="container">
+           
+
+            <div class="col-md-8">
+                <div class="row animate-group">
+                    <div class="col-md-offset-2 col-md-12 col-sm-12">
+                        <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                            <i class="icon-box-icon fa fa-pencil"></i>
+                                 {% if is_granted('ROLE_EVAL') or is_granted('ROLE_ADMIN') %}
+                {% include ':front:profilen.html.twig' %}
+           
+            {%endif%}
+            
+         
+                            <h1 align="left" class="icon-box-title">
+                                     <b> <font color='#121657' >  Evaluations you have sent  </font></b></h1><br><br>
+           
+                            <div class="icon-box-content">  
+                                <div class="row">
+                                    
+                                     <div class="col-md-12 col-sm-12">
+                                  
+ 
+    {% for evaluationreponse in evaluationreponse%} 
+    {%if evaluationreponse.question.id=='2'%}
+        <h3><b><font color='#11145a'> Code de l'évaluation:</font> ATM2018/{{evaluationreponse.evaluation.id}}</b> <br> 
+           <h4><b>{{evaluationreponse.question}}:</b></h4>
+      <h4>{{evaluationreponse.reponse}}</h4>
+     {%else%}
+     <h4><b>{{evaluationreponse.question}}:</b></h4>
+     <h4>{{evaluationreponse.reponse}}</h4>{% endif %}
+
+ 
+    {% endfor %}<br>
+ </table> <br>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+                </div></div></div>
+
+
+    </section>
+{%endblock%}
+

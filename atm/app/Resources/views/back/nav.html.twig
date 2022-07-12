@@ -1,0 +1,222 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- start: TOP NAVIGATION CONTAINER -->
+    <div class="container">
+        <div class="navbar-header">
+            <!-- start: RESPONSIVE MENU TOGGLER -->
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="clip-list-2"></span>
+            </button>
+            <!-- end: RESPONSIVE MENU TOGGLER -->
+            <!-- start: LOGO -->
+            <a class="navbar-brand faa-pulse animated" href="{{path('tuto_frontoffice_homepage')}}">
+                <img style="width: 120px;height: 30px;"  alt="" src="{{ asset('front/images/atm.PNG') }}">
+            </a>
+            <!-- end: LOGO --> 
+        </div>
+
+        <!-- start: TOP NAVIGATION MENU -->
+
+        <!-- end: TO-DO DROPDOWN-->
+
+        <!-- end: MESSAGE DROPDOWN -->
+
+        <div class="navbar-tools">
+            <ul class="nav navbar-right">
+
+                <!-- start: NOTIFICATION DROPDOWN -->
+
+
+
+                <li class="dropdown">
+
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                        <strong style="color:#080e5a;font-family:arial;font-size:130%;"> Soumissions</strong>
+
+
+                        <span class="badge">{{ render (controller('tutoBackofficeBundle:Soumission:count')) }}</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu notifications">
+                        <li>
+                            <span class="dropdown-menu-title"> Notifications</span>
+                        </li>
+                        <li>
+                            <div class="drop-down-wrapper ps-container">
+                                <ul>
+                                    <li>
+
+                                        <a href="javascript:void(0)">
+                                            <span class="message">{{ render (controller('tutoBackofficeBundle:Soumission:notifsoumadmin')) }} </span>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="ps-scrollbar-x-rail" style="width: 270px; display: none; left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 250px; display: none; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+                        </li>
+                        <li class="view-all">
+                            <a href="javascript:void(0)">
+                                 <a href="{{path('tuto_notifsoumission')}}">
+                                    Voir toute les notifications <i class="fa fa-arrow-circle-o-right"></i>
+                                </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- end: NOTIFICATION DROPDOWN -->
+
+                <!-- start: NOTIFICATION DROPDOWN -->
+
+                <li class="dropdown">
+
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                        <span class="badge" >{{ render (controller('tutoBackofficeBundle:Evaluation:count')) }}</span> <strong style="color:#080e5a;font-family:arial;font-size:130%;"> Evaluations</strong>
+                        <b class="caret"></b>
+
+
+                    </a>
+                    <ul class="dropdown-menu notifications">
+                        <li>
+                            <span class="dropdown-menu-title"> Notifications</span>
+                        </li>
+                        <li>
+                            <div class="drop-down-wrapper ps-container">
+                                <ul>
+                                    <li>
+
+                                        <a href="javascript:void(0)">
+                                            <span class="message"> {{ render (controller('tutoBackofficeBundle:Evaluation:notifadmin')) }}
+                                            </span>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="ps-scrollbar-x-rail" style="width: 270px; display: none; left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 250px; display: none; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+                        </li>
+                        <li class="view-all">
+                            <a href="javascript:void(0)">
+                                <a >
+                                    Voir toute les notifications <i class="fa fa-arrow-circle-o-right"></i>
+                                </a>
+                        </li></ul>
+                </li>
+
+                <li class="dropdown">
+
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                        <span class="badge" >{{ render (controller('tutoBackofficeBundle:Contact:count')) }}</span> <strong style="color:#080e5a;font-family:arial;font-size:130%;"> Contact</strong>
+                        <b class="caret"></b>
+
+
+                    </a>
+                    <ul class="dropdown-menu notifications">
+                        <li>
+                            <span class="dropdown-menu-title"> Notifications</span>
+                        </li>
+                        <li>
+                            <div class="drop-down-wrapper ps-container">
+                                <ul>
+                                    <li>
+
+                                        <a href="javascript:void(0)">{{ render (controller('tutoBackofficeBundle:Contact:notifcontactadmin')) }}
+                                            <span class="message"> 
+                                            </span>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="ps-scrollbar-x-rail" style="width: 270px; display: none; left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 250px; display: none; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+                        </li>
+                        <li class="view-all">
+                            <a href="javascript:void(0)">
+                                <a >
+                                    Voir toute les notifications <i class="fa fa-arrow-circle-o-right"></i>
+                                </a>
+                        </li>
+
+                    </ul>
+                </li>
+                  <li class="dropdown">
+
+                    <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                        <small>(2)</small><strong style="color:#080e5a;font-family:arial;font-size:130%;">Evaluateurs inscrits</strong>
+
+
+                        <span class="badge">{{ render (controller('tutoBackofficeBundle:User:count')) }}</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu notifications">
+                        <li>
+                            <span class="dropdown-menu-title"> Notifications</span>
+                        </li>
+                        <li>
+                            <div class="drop-down-wrapper ps-container">
+                                <ul>
+                                    <li>
+
+                                        <a href="javascript:void(0)">
+                                            <span class="message">{{ render (controller('tutoBackofficeBundle:User:notifevaladmin')) }} </span>
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <div class="ps-scrollbar-x-rail" style="width: 270px; display: none; left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 250px; display: none; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+                        </li>
+                        <li class="view-all">
+                            <a href="javascript:void(0)">
+                                <a href="{{path('tuto_notifevaluateurs')}}">
+                                    Voir toute les notifications <i class="fa fa-arrow-circle-o-right"></i>
+                                </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <style>
+                    .nav > li.dropdown .dropdown-toggle .badge {
+                        background-color: #fcf24f;
+                    }
+
+
+                    </style>
+                    <!-- end: NOTIFICATION DROPDOWN -->
+                    <!-- start: USER DROPDOWN -->
+
+                     <li class="dropdown current-user">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                                 {{ render (controller('tutoBackofficeBundle:User:imageadmin')) }} 
+                                <span class="username">{{ app.user }}</span>
+                                <i class="clip-chevron-down"></i>
+                            </a>
+                          <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="{{path('tuto_calendrier')}}">
+                                    
+                                        <i class="clip-calendar"></i>
+                                        &nbsp;My Calendar
+                                    </a>
+                                <li>
+
+                                <li>
+                                 <a href="{{path('fos_user_profile_show')}}"><i class="clip-locked"></i>
+                                        &nbsp;Espace admin </a>
+                                </li>
+
+                                 <li>
+                                    <a href="{{path('fos_user_security_logout')}}">
+                                        <i class="clip-exit"></i>
+                                        &nbsp;Déconnexion
+                                    </a>
+                                </li>
+
+
+                            </ul>
+            </div>
+
+
+
+        </div>
+        <!-- end: TOP NAVIGATION CONTAINER -->
+    </div>

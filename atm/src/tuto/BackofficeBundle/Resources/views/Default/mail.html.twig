@@ -1,0 +1,75 @@
+{% extends ":back:base.html.twig" %}
+{% block title %} Email{% endblock  %}
+{% block body %}
+    <div class="container">
+         <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <br>
+             <div class="row">
+            <div class="col-md-12">
+                <!-- start: FORM VALIDATION 1 PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Envoyer un email
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                            </a>
+                            <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-expand" href="#">
+                                <i class="fa fa-resize-full"></i>
+                            </a>
+                            <a class="btn btn-xs btn-link panel-close" href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+
+                        <br>
+<html>
+    
+    <body>
+        <form  method="post">
+            <b>Sujet :</b> <input type="text" size="50" name="Subject"/><br/><br/><br/>
+          
+            <b> text : </b><textarea type="text"  row="100" cols="100" name="message"> </textarea><br/><br/><br/>
+            <button class="button orange glossy" type="submit" value="envoyer"/><font color='black'>envoyer</font></button>
+        <style>
+                                                .button.orange {
+                                                    width: 170px;
+                                                    height:70px;
+                                                    background-color: #FF4500;
+
+                                                }
+
+
+
+                                            </style>
+        </form>
+    </body>
+</html>
+ </div>
+                </div> </div></div></div>
+       {%endblock%}

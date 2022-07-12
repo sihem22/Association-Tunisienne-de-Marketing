@@ -1,0 +1,33 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Calendrier{% endblock  %}
+{% block body %}
+<div class="container">
+        <div class="row">
+           <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="clip-home-2"></i>
+                        <a href="{{path('tuto_frontoffice_homepage')}}">
+                            Front Office
+                        </a>
+                    </li>
+                    <li class="active">
+                        <i><b>  Back Office </b> </i>
+                    </li>
+                    
+                </ol>
+            </div>
+        </div>
+        </div>
+       {% include ":back:alert.html.twig" %}
+
+
+        <div class="row">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ccccff&amp;src=2fkhldaghia5cooq38oe3jte9s%40group.calendar.google.com&amp;color=%23853104&amp;ctz=Africa%2FTunis" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+									
+		</div>
+</div>
+
+		  {% endblock  %}

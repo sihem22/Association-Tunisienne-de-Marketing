@@ -1,0 +1,267 @@
+tuto_frontoffice_homepage:
+    path:     /
+    defaults: { _controller: tutoFrontofficeBundle:Default:index }
+frontoffice_homepageen:
+    path:     /eng
+    defaults: { _controller: tutoFrontofficeBundle:Default:indexen }
+sign_up:
+    path: /SignUp
+    defaults: {_controller: tutoFrontofficeBundle:Default:signup }
+
+register1:
+    path: /register1
+    defaults: {_controller: FOSUserBundle:Registration:Register1 }
+InformationCompte:
+    path: /espace
+    defaults: {_controller: tutoFrontofficeBundle:InformationCompte:modifier }
+tuto_soumission_ajout:
+    path:   /soumission/ajout
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout }
+tuto_soumission1_ajout:
+    path:   /soumission1/ajout
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout1 }
+tuto_soumission2_ajout:
+    path:   /soumission2/ajout
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout2 }
+tuto_soumission3_ajout:
+    path:   /soumission3/ajout
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout3 }
+tuto_soumission_ajouten:
+    path:   /soumission/ajout/eng
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajouten }
+tuto_soumission1_ajouten:
+    path:   /soumission1/ajout/eng
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout1en }
+tuto_soumission2_ajouten:
+    path:   /soumission2/ajout/eng
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout2en }
+tuto_soumission3_ajouten:
+    path:   /soumission3/ajout/eng
+    defaults: { _controller: tutoFrontofficeBundle:Soumission:ajout3en }
+front_Succes:
+    path: /soumission_succes/{id}/{notifId}
+    defaults: {_controller: tutoFrontofficeBundle:Soumission:affiche }
+front_Succesen:
+    path: /soumission_succes/{id}/{notifId}/eng
+    defaults: {_controller: tutoFrontofficeBundle:Soumission:affichen }
+front_Succes1:
+    path: /soumission_succes1/{id}
+    defaults: {_controller: tutoFrontofficeBundle:Soumission:affiche1 }
+front_type:
+    path: /soumission_type
+    defaults: {_controller: tutoFrontofficeBundle:Soumission:pagetype }
+
+   
+
+notification_affiche:
+    path:   /notifaffiche
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affiche }
+notification_affichen:
+    path:   /notifaffiche/eng
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affichen }
+frontoffice_homepageen:
+    path:     /eng
+    defaults: { _controller: tutoFrontofficeBundle:Render:indexen }
+
+front_contact:
+    path: /contact
+    defaults: {_controller: tutoFrontofficeBundle:Contact:ajout }
+
+front_contacten:
+    path: /contact/eng
+    defaults: {_controller: tutoFrontofficeBundle:Contact:ajouten }
+
+front_faq:
+    path:   /faq
+    defaults: { _controller: tutoFrontofficeBundle:FAQ:faq }
+
+front_faqen:
+    path:   /faq/eng
+    defaults: { _controller: tutoFrontofficeBundle:FAQ:faqen }
+
+
+front_colloque:
+    path:   /colloque
+    defaults: { _controller: tutoFrontofficeBundle:Colloque:colloque }
+
+front_colloqueng:
+    path:   /colloque/eng
+    defaults: { _controller: tutoFrontofficeBundle:Colloque:colloqueng }    
+
+front_org:
+    path:   /org
+    defaults: { _controller: tutoFrontofficeBundle:Org:org }
+front_orgen:
+    path:   /org/eng
+    defaults: { _controller: tutoFrontofficeBundle:Org:orgen }
+
+front_sc:
+    path:   /sc
+    defaults: { _controller: tutoFrontofficeBundle:Membresc:membresc }
+front_scen:
+    path:   /sc/eng
+    defaults: { _controller: tutoFrontofficeBundle:Membresc:membrescen }
+
+front_guide:
+    path:   /guide
+    defaults: { _controller: tutoFrontofficeBundle:Guide:guide }
+
+front_guiden:
+    path:   /guide/eng
+    defaults: { _controller: tutoFrontofficeBundle:Guide:guiden }
+
+
+front_down:
+    path:   /down
+    defaults: { _controller: tutoFrontofficeBundle:Down:down }
+
+front_video:
+    path:   /video
+    defaults: { _controller: tutoFrontofficeBundle:Video:video }
+front_video1:
+    path:   /video1
+    defaults: { _controller: tutoFrontofficeBundle:Video:video1 }
+front_video2:
+    path:   /video2
+    defaults: { _controller: tutoFrontofficeBundle:Video:video2 }
+front_video3:
+    path:   /video3
+    defaults: { _controller: tutoFrontofficeBundle:Video:video3 }
+
+front_videoen:
+    path:   /ATM/eng
+    defaults: { _controller: tutoFrontofficeBundle:Video:videoen }
+    
+sign_up:
+    path: /SignUp
+    defaults: {_controller: tutoFrontofficeBundle:Default:signup }
+
+
+sign_upen:
+    path: /SignUp/eng
+    defaults: {_controller: tutoFrontofficeBundle:Default:signupen }
+
+InformationCompten:
+    path: /espace/eng
+    defaults: {_controller: tutoFrontofficeBundle:InformationCompte:modifieren }
+
+front_reponsesSucces:
+    path: /questionnaire_succes/{soumission}/{id}
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:reponses }
+
+front_questionnaire:
+    path: /questionnaire/{soumission}
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:quest }
+front_repEvaluation:
+    path: /evalreponses/{soumission}/{id}/{notifId}
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:reponseseval }
+front_repEvaluationen:
+    path: /evalreponses/{soumission}/{id}/{notifId}/eng
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:reponsesevalen }
+front_repEvaluation1:
+    path: /evalreponses/{soumission}
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:reponseseval1 }
+front_repEvaluation2:
+    path: /evalreponses2/{soumission}
+    defaults: {_controller: tutoFrontofficeBundle:Questionnaire:reponseseval2 }
+notification_affiche1:
+    path:   /papierEnvoyes
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affiche1 }
+notification_affiche2:
+    path:   /evaluationEnvoyees
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affiche2 }
+notification_affiche1en:
+    path:   /papierEnvoyes/eng
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affiche1en }
+notification_affiche2en:
+    path:   /evaluationEnvoyees/eng
+    defaults: { _controller: tutoFrontofficeBundle:Notification:affiche2en }
+
+tuto_recherchett:
+    path:     /recherchett
+    defaults: { _controller: tutoFrontofficeBundle:Article:recherchett }
+tuto_recherchetten:
+    path:     /recherchett/eng
+    defaults: { _controller: tutoFrontofficeBundle:Article:recherchetten }
+tuto_affiche:
+    path:     /colloquesprecedents
+    defaults: { _controller: tutoFrontofficeBundle:Article:affiche }
+tuto_affichen:
+    path:     /article/eng
+    defaults: { _controller: tutoFrontofficeBundle:Article:affichen }
+tuto_affiche1:
+    path:     /colloquesprecedents/{id}
+    defaults: { _controller: tutoFrontofficeBundle:Article:affiche1 }
+tuto_affiche1en:
+    path:     /article/{id}/eng
+    defaults: { _controller: tutoFrontofficeBundle:Article:affiche1en }
+tuto_affiche2:
+    path:     /colloquesprecedents/{id}/{id2}
+    defaults: { _controller: tutoFrontofficeBundle:Article:affiche2 }
+tuto_affiche2en:
+    path:     /article/{id}/{id2}/eng
+    defaults: { _controller: tutoFrontofficeBundle:Article:affiche2 }
+front_ethique:
+    path:   /ethique
+    defaults: { _controller: tutoFrontofficeBundle:Ethique:ethique }
+front_ethiquen:
+    path:   /ethique/eng
+    defaults: { _controller: tutoFrontofficeBundle:Ethique:ethiquen }
+
+front_soumettre:
+    path:   /soumettre
+    defaults: { _controller: tutoFrontofficeBundle:Soumettre:soumettre }
+front_soumettren:
+    path:   /soumettre/eng
+    defaults: { _controller: tutoFrontofficeBundle:Soumettre:soumettreen }
+front_nouveauté:
+    path:   /nouveautes
+    defaults: { _controller: tutoFrontofficeBundle:Nouveaute:nouveaute }
+front_nouveautéen:
+    path:   /nouveautes/eng
+    defaults: { _controller: tutoFrontofficeBundle:Nouveaute:nouveauteen }
+front_hotel:
+    path:   /hotel
+    defaults: { _controller: tutoFrontofficeBundle:Hotel:hotel }
+front_hotelen:
+    path:   /hotel/eng
+    defaults: { _controller: tutoFrontofficeBundle:Hotel:hotelen }
+
+front_atelierdoc:
+    path:   /atelierdoc
+    defaults: { _controller: tutoFrontofficeBundle:AtelierDoc:atelierdoc }
+front_atelierdocen:
+    path:   /atelierdoc/eng
+    defaults: { _controller: tutoFrontofficeBundle:AtelierDoc:atelierdocen }
+front_coverletter:
+    path:   /coverletter
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche2 }
+front_manuscript:
+    path:   /manuscript
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche3 }
+front_doctoral:
+    path:   /FicheDeStyleAtelierDoc
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche4 }
+front_communication:
+    path:   /FicheDeStyleCommunication
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche5 }
+front_modele:
+    path:   /FicheDeDeStyleModeleEtFigure
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche6 }
+front_inscription:
+    path:   /FicheInscription
+    defaults: { _controller: tutoFrontofficeBundle:Default:affiche7 }
+front_callpaper:
+    path:   /callpaper
+    defaults: { _controller: tutoFrontofficeBundle:Callpaper:callpaper }
+front_callpaperen:
+    path:   /callpaper/eng
+    defaults: { _controller: tutoFrontofficeBundle:Callpaper:callpaperen }
+front_auteur:
+    path:   /auteur/ajout/{id}
+    defaults: { _controller: tutoFrontofficeBundle:Auteur:ajout }
+
+    
+
+
+    

@@ -1,0 +1,346 @@
+tuto_backoffice_homepage:
+    path:     /
+    defaults: { _controller: tutoBackofficeBundle:Default:index }
+tuto_pays_ajout:
+    path:   /pays/ajout
+    defaults: { _controller: tutoBackofficeBundle:Pays:ajout }
+tuto_pays_modif:
+    path:   /pays/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Pays:modifier }
+tuto_pays:
+    path:   /pays
+    defaults: { _controller: tutoBackofficeBundle:Pays:affiche }
+tuto_pays_supp:
+    path:   /pays/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Pays:supprimer }
+tuto_specialite_ajout:
+    path:   /specialite/ajout
+    defaults: { _controller: tutoBackofficeBundle:Specialite:ajout }
+tuto_specialite_modif:
+    path:   /specialite/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Specialite:modifier }
+tuto_specialite:
+    path:   /specialite
+    defaults: { _controller: tutoBackofficeBundle:Specialite:affiche }
+tuto_specialite_supp:
+    path:   /specialite/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Specialite:supprimer }
+tuto_envoie_ajout:
+    path:   /envoie/ajout
+    defaults: { _controller: tutoBackofficeBundle:EnvoieMail:modifier }
+tuto_grade_ajout:
+    path:   /grade/ajout
+    defaults: { _controller: tutoBackofficeBundle:Grade:ajout }
+tuto_grade_modif:
+    path:   /grade/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Grade:modifier }
+tuto_grade:
+    path:   /grade
+    defaults: { _controller: tutoBackofficeBundle:Grade:affiche }
+tuto_grade_supp:
+    path:   /grade/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Grade:supprimer }
+tuto_cherch_ajout:
+    path:   /cherch/ajout
+    defaults: { _controller: tutoBackofficeBundle:Cherch:ajout }
+tuto_cherch_modif:
+    path:   /cherch/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Cherch:modifier }
+tuto_cherch:
+    path:   /cherch
+    defaults: { _controller: tutoBackofficeBundle:Cherch:affiche }
+tuto_cherch_supp:
+    path:   /cherch/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Cherch:supprimer }
+
+
+tuto_statut_ajout:
+    path:   /statut/ajout
+    defaults: { _controller: tutoBackofficeBundle:Statut:ajout }
+tuto_statut_modif:
+    path:   /statut/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Statut:modifier }
+tuto_statut:
+    path:   /statut
+    defaults: { _controller: tutoBackofficeBundle:Statut:affiche }
+tuto_statut_supp:
+    path:   /statut/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Statut:supprimer }
+tuto_discipline_ajout:
+    path:   /discipline/ajout
+    defaults: { _controller: tutoBackofficeBundle:Discipline:ajout }
+tuto_discipline_modif:
+    path:   /discipline/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Discipline:modifier }
+tuto_discipline:
+    path:   /discipline
+    defaults: { _controller: tutoBackofficeBundle:Discipline:affiche }
+tuto_discipline_supp:
+    path:   /discipline/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Discipline:supprimer }
+tuto_user_ajout:
+    path:   /user/ajout
+    defaults: { _controller: tutoBackofficeBundle:User:ajout }
+tuto_user_modif:
+    path:   /user/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:User:modifier }
+tuto_userAdmin:
+    path:   /user
+    defaults: { _controller: tutoBackofficeBundle:User:affiche }
+tuto_userEval:
+    path:   /evaluateur
+    defaults: { _controller: tutoBackofficeBundle:User:affiche1 }
+tuto_userCherch:
+    path:   /chercheur
+    defaults: { _controller: tutoBackofficeBundle:User:affiche2 }
+tuto_user_supp:
+    path:   /user/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:User:supprimer }
+tuto_soumission:
+    path:   /soumission
+    defaults: { _controller: tutoBackofficeBundle:Soumission:affiche }
+tuto_soumission1:
+    path:   /soumission1
+    defaults: { _controller: tutoBackofficeBundle:Soumission:affiche1 }
+tuto_soumission2:
+    path:   /soumission2
+    defaults: { _controller: tutoBackofficeBundle:Soumission:affiche2 }
+tuto_soumission3:
+    path:   /soumission3
+    defaults: { _controller: tutoBackofficeBundle:Soumission:affiche3 }
+tuto_soumission_modif:
+    path:   /soumission/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Soumission:modifier }
+tuto_soumission_supp:
+    path:   /soumission/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Soumission:supprimer }
+
+tuto_etat_ajout:
+    path:   /etat/ajout
+    defaults: { _controller: tutoBackofficeBundle:Etat:ajout }
+tuto_etat:
+    path:   /etat
+    defaults: { _controller: tutoBackofficeBundle:Etat:affiche }
+tuto_etat_supp:
+    path:   /etat/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Etat:supprimer }
+tuto_etat_modif:
+    path:   /etat/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Etat:modifier }
+tuto_vu_modif:
+    path:   /evaluation/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Evaluation:modifier1 }
+tuto_article_ajout:
+    path:   /article/ajout
+    defaults: { _controller: tutoBackofficeBundle:Article:ajout }
+
+tuto_chercheur_ajout:
+    path:   /Eval/ajout
+    defaults: { _controller: tutoBackofficeBundle:Chercheur:ajout }
+tuto_chercheur_modif:
+    path:   /Eval/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Chercheur:modifier }
+tuto_chercheur:
+    path:   /Eval
+    defaults: { _controller: tutoBackofficeBundle:Chercheur:affiche }
+tuto_chercheur_supp:
+    path:   /Eval/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Chercheur:supprimer }
+tuto_soumission_envoie:
+    path:   /soumission/envoie/{id}
+    defaults: { _controller: tutoBackofficeBundle:Soumission:envoie }
+tuto_notifevaluateurs:
+    path:   /notifevaluateurs
+    defaults: { _controller: tutoBackofficeBundle:User:notifevaladmin1 }
+tuto_notifsoumission:
+    path:   /notifsoumission
+    defaults: { _controller: tutoBackofficeBundle:Soumission:notifsoumadmin1 }
+tuto_contact:
+    path:   /contact
+    defaults: { _controller: tutoBackofficeBundle:Contact:contact }
+tuto_com:
+    path:   /contact/{id}
+    defaults: { _controller: tutoBackofficeBundle:Contact:affiche }
+
+
+
+tuto_contact_supp:
+    path:   /contact/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Contact:supprimer }
+    
+tuto_type:
+    path:   /type
+    defaults: { _controller: tutoBackofficeBundle:Type:affiche }
+
+tuto_type_modif:
+    path:   /type/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Type:modifier }
+tuto_type_supp:
+    path:   /type/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Type:supprimer }
+tuto_type_ajout:
+    path:   /type/ajout
+    defaults: { _controller: tutoBackofficeBundle:Type:ajout }
+
+tuto_maps:
+    path: /maps
+    defaults: {_controller: tutoBackofficeBundle:Maps:maps }
+
+tuto_calendrier:
+    path: /calendrier
+    defaults: {_controller: tutoBackofficeBundle:Calendrier:calendrier }
+
+
+tuto_membre_ajout:
+    path:   /membresc/ajout
+    defaults: { _controller: tutoBackofficeBundle:Membre:ajout }
+
+tuto_membre:
+    path:   /membresc
+    defaults: { _controller: tutoBackofficeBundle:Membre:affiche }
+
+tuto_membre_supp:
+    path:   /membresc/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Membre:supprimer }
+
+tuto_membre_modif:
+    path:   /membresc/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Membre:modifier }
+
+tuto_membreorg_ajout:
+    path:   /membreorg/ajout
+    defaults: { _controller: tutoBackofficeBundle:Membreorg:ajout }
+
+tuto_membreorg:
+    path:   /membreorg
+    defaults: { _controller: tutoBackofficeBundle:Membreorg:affiche }
+
+tuto_membreorg_supp:
+    path:   /membreorg/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Membreorg:supprimer }
+
+tuto_membreorg_modif:
+    path:   /membreorg/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Membreorg:modifier }
+tuto_sendmail:
+    path:     /envoie/{id}
+    defaults: { _controller: tutoBackofficeBundle:Contact:modifier }    
+tuto_lock:
+    path:   /lock
+    defaults: { _controller: tutoBackofficeBundle:lock:lock}
+tuto_ValeursDefault_ajout:
+    path:   /valeursDefault/ajout
+    defaults: { _controller: tutoBackofficeBundle:ValeursDefault:ajout }
+tuto_question_ajout:
+    path:   /question/ajout
+    defaults: { _controller: tutoBackofficeBundle:Question:ajout }
+tuto_question_modif:
+    path:   /question/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Question:modifier }
+tuto_ValeursDefault:
+    path:   /valeursDefault
+    defaults: { _controller: tutoBackofficeBundle:ValeursDefault:affiche }
+tuto_ValeursDefault_modif:
+    path:   /valeursDefault/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:ValeursDefault:modifier }
+tuto_ValeursDefault_supp:
+    path:   /valeursDefault/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:ValeursDefault:supprimer }
+tuto_question_supp:
+    path:   /question/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Question:supprimer }
+tuto_question:
+    path:   /question
+    defaults: { _controller: tutoBackofficeBundle:Question:affiche }
+tuto_evaluation_modif:
+    path:   /evaluation/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Evaluation:modifier }
+
+tuto_evaluation:
+    path:   /evaluation
+    defaults: { _controller: tutoBackofficeBundle:Evaluation:affiche }
+tuto_evaluation_supp:
+    path:   /evaluation/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Evaluation:supprimer }
+tuto_evaluationfinal:
+    path:   /evaluationfinal
+    defaults: { _controller: tutoBackofficeBundle:EvaluationFinal:affiche }
+tuto_evaluationfinal_supp:
+    path:   /evaluationfinal/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:EvaluationFinal:supprimer }
+tuto_evaluationfinal_ajout:
+    path:   /evaluationfinal/ajout/{soumission}
+    defaults: { _controller: tutoBackofficeBundle:EvaluationFinal:eval }
+
+tuto_evaluationreponse:
+    path:   /evaluationreponse/{id}
+    defaults: { _controller: tutoBackofficeBundle:EvaluationReponse:affiche }
+tuto_notification:
+    path:   /notification
+    defaults: { _controller: tutoBackofficeBundle:Notification:affiche }
+tuto_notification1:
+    path:   /notification1
+    defaults: { _controller: tutoBackofficeBundle:Notification:affiche1 }
+    
+tuto_notification_supp:
+    path:   /notification/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Notification:supprimer }
+tuto_emailsucces_soumission:
+    path:   /email/{id}
+    defaults: { _controller: tutoBackofficeBundle:Soumission:envoie1 }
+
+
+tuto_article:
+    path:   /article
+    defaults: { _controller: tutoBackofficeBundle:Article:affiche }
+
+tuto_article_supp:
+    path:   /article/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Article:supprimer }
+
+tuto_article_modif:
+    path:   /article/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Article:modifier }
+
+tuto_annee_ajout:
+    path:   /annee/ajout
+    defaults: { _controller: tutoBackofficeBundle:Annee:ajout }
+tuto_annee_modif:
+    path:   /annee/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Annee:modifier }
+tuto_annee:
+    path:   /annee
+    defaults: { _controller: tutoBackofficeBundle:Annee:affiche }
+tuto_annee_supp:
+    path:   /annee/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Annee:supprimer }
+tuto_slider_ajout:
+    path:   /slider/ajout
+    defaults: { _controller: tutoBackofficeBundle:Slider:ajout }
+tuto_slider_modif:
+    path:   /slider/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:Slider:modifier }
+tuto_slider:
+    path:   /slider
+    defaults: { _controller: tutoBackofficeBundle:Slider:affiche }
+tuto_auteur1:
+    path:   /auteur
+    defaults: { _controller: tutoBackofficeBundle:Auteur:auteur }
+tuto_slider_supp:
+    path:   /slider/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:Slider:supprimer }
+tuto_file_ajout:
+    path:   /file/ajout
+    defaults: { _controller: tutoBackofficeBundle:File:ajout }
+tuto_file_modif:
+    path:   /file/modif/{id}
+    defaults: { _controller: tutoBackofficeBundle:File:modifier }
+tuto_file:
+    path:   /file
+    defaults: { _controller: tutoBackofficeBundle:File:affiche }
+tuto_file_supp:
+    path:   /file/supp/{id}
+    defaults: { _controller: tutoBackofficeBundle:File:supprimer }
+tuto_dash:
+    path:   /dashbroad
+    defaults: { _controller: tutoBackofficeBundle:Dashbroad:script }

@@ -1,0 +1,7 @@
+{%for user in user%}
+    {% if user.path is null %}
+        
+   <img  style="width: 30px;height: 30px;"  alt="" src="{{ asset('front/images/admin.png') }}">
+    {%else%}
+ <img  src="{{ asset(user.assetPath)}}" style="width: 40px;height: 40px;" >{%endif%}
+ {%endfor%}

@@ -1,0 +1,91 @@
+{% extends ":back:base.html.twig" %}
+{% block title %}Notification{% endblock  %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="clip-home-2"></i>
+                            <a href="{{path('tuto_frontoffice_homepage')}}">
+                                Front Office
+                            </a>
+                        </li>
+                        <li class="active">
+                            <i><b>  Back Office </b> </i>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+        {% for label, flashes in app.session.flashbag.all %}
+            {% for flash in flashes %}
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert">
+                        ×
+                    </button>
+                    <i class="fa fa-check-circle"></i>
+                    <strong>{{ label|title }} !!!</strong> :  {{ flash }}
+
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- start: DYNAMIC TABLE PANEL -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-external-link-square"></i>
+                        Liste des Notifications
+                        <div class="panel-tools">
+                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#"> </a>
+
+                            <a class="btn btn-xs btn-link panel-expand" href="#"> <i class="fa fa-resize-full"></i> </a>
+
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                            <thead>
+                                <tr>
+                                    <th class="center">DateNotif</th>
+
+                                    <th class="center">A qui envoyé</th>
+                                    <th class="center">Evaluation</th>
+                                    <th class="center">Action</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for notification in notifications %}
+                                    {% if notification.evaluationfinal != null %}
+                                        <tr>
+
+                                            <td class="center">{{notification.dateNotif|date('d/m/Y')}}</td>
+                                            <td class="center">User{{notification.user}}</td>
+                                            <td class="center"> EvalFinal_{{notification.evaluationfinal.id}} </td>
+                                             <td class="center"> <a href="{{path('tuto_notification_supp',{'id':notification.id})}}"  class="btn btn-xs btn-bricky tooltips"  data-original-title="Supprimer" data-placement="top" onclick="javascript:return(confirm('Voulez-vous  supprimer cette ligne??'))"><i class="fa fa-times fa fa-white"></i></a></td>
+
+
+
+                                        </tr>
+                                        {%endif%}
+                                 {%endfor%}       
+                                        
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end: DYNAMIC TABLE PANEL -->
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock  %}

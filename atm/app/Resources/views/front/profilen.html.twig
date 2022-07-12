@@ -1,0 +1,146 @@
+
+<ul class="nav nav-pills">
+    <div class="space12">
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('notification_affiche1en') }}">
+                <b>how to do?</b>
+            </a>
+
+        </div>
+          
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('notification_affiche1en') }}">
+                <b>   Sent Papers </b>
+            </a>
+
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-purple" href="{{  path('notification_affiche2en') }}">
+                <b>  Sent Evaluations  </b>
+            </a>
+
+        </div>
+
+
+        <div class="btn-group">
+            <button class="btn btn-purple dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-file"></i> <b>Submit  </b><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li>
+                    <a href="{{  path('tuto_soumission_ajouten') }}">
+                        <h4><b> Doctoral Workshop</b> </h4> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{  path('tuto_soumission1_ajouten') }}">
+                        <h4><b>   Communication Paper </b></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{  path('tuto_soumission2_ajouten') }}">
+                        <h4>   <b>   Poster </b></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{  path('tuto_soumission3_ajouten') }}">
+                        <h4>   <b> Case study </b></h4>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="btn-group">
+                <button class="btn btn-purple dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{  path('fos_user_profile_showen') }}">
+                            <h4>  <b>    Profile </b> </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{  path('fos_user_change_passworden') }}">
+                            <h4>    <b>   Change password
+ </b> </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{  path('InformationCompten') }}">
+                            <h4>   <b>     Change your contact details </b> </h4>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+ 
+</ul> 
+<style>
+    .btn{
+
+        background-color: rgba(104, 103, 152, 0.37);
+        color: #0d0b6f;
+        
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 2.42857143;
+        border-radius:200px;
+    }
+
+
+
+    .textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+        font-size: 15px;
+
+        padding: 10px 10px;
+
+        width: 650px ;
+        margin-top: 10px;
+        display: flow-root;}
+    select {
+
+        width: 300px;
+        padding: 15px;
+
+    }
+    label {
+        font-size: 15px;
+        font-family: cambria; 
+    }
+
+    .icon-box {  
+        text-align: left;
+    }    
+
+  
+    
+    .animate-if-visible, .animate-group .animate {
+
+        background-color: rgba(0, 0, 0, 0);
+
+
+        border: 1px solid black;
+
+
+    }
+
+
+
+
+
+</style>
+
+
+<hr>
+
+<div class="col-sm-4">
+    {{ render (controller('tutoFrontofficeBundle:Default:affiche')) }} 
+
+</div>  

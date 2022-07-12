@@ -1,0 +1,15 @@
+
+a {
+    color: #080e5a;
+     font-family: cambria;
+}
+
+body {
+    color: #0C0C0C;
+    direction: ltr;
+   font-family: cambria;
+    font-size: 13px;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+   font-family: cambria;
+    color: #383838;
+}

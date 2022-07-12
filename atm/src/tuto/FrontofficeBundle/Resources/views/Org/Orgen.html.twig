@@ -1,0 +1,50 @@
+{% extends ":front:Fronten.html.twig" %}
+
+{% block title %}Comitee d'organisation{% endblock  %}
+{% block body %}
+ <section class="wrapper">
+        <div class="container">
+            <div class="row animate-group">
+                <div class="col-md-offset-0 col-md-12">
+                    <div class="icon-box animate" data-animation-options="{&quot;animation&quot;:&quot;flipInY&quot;, &quot;duration&quot;:&quot;600&quot;}" style="opacity: 1; animation-fill-mode: both; animation-duration: 1.2s; animation-delay: 0s; animation-name: flipInY;">
+                        <p><font size="5"><div align="left"><div align='justify'> The organization of the congress is carried out by the research laboratory ERMA (Enterprise and Research in Marketing) in the Faculty of Economics and Management of Tunis, bringing together research lecturers mainly from the University of Tunis El Manar. Researchers in marketing from other Tunisian universities are also involved.</div></div></font></p><br><br><br><br><br>
+                            
+    <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                            {% for membreorg in membreorgs %}
+
+                                <ul class="team-list animate-group">
+                                    <li class="col-md-4 col-sm-4">
+                                        <div class="thumbnail">
+                                        {% if membreorg.path is null %}
+
+                                            <img src="{{ asset('front/images/user.png') }}" alt=""data-animation-options='{"animation":"fadeInLeft", "duration":"300"}'>
+                                        {%else%}
+                                            <img  src="{{ asset(membreorg.assetPath)}}" alt=""data-animation-options='{"animation":"fadeInLeft", "duration":"300"}'>{%endif%}
+
+                                            <span class="image-overlay"> {% if membreorg.FB is not null %}<a target="_blank" href={{membreorg.FB}}><i data-original-title="Facebook" data-placement="top" class="tooltips fa fa-facebook circle-icon circle-small"></i></a>{%endif%}{% if membreorg.twitter is not null %} <a target="_blank" href={{membreorg.twitter}}><i data-original-title="Twitter" data-placement="top" class="tooltips fa fa-twitter circle-icon circle-small"></i></a>{%endif%}{% if membreorg.linkedin is not null %}<a target="_blank" href={{membreorg.linkedin}}><i data-original-title="Linkedin" data-placement="top" class="tooltips fa fa-linkedin circle-icon circle-small"></i></a>{%endif%}</span>
+                                        </div>
+                                        <div align="center">
+                                            <h3>{{membreorg.nom}}</h3>
+                                            <div>
+                                                {{membreorg.university}}                                       
+                                            </div></div>
+
+                                    </li>
+                                </ul>
+
+
+                                {%endfor%}
+
+                              </div></div></div></div>
+
+
+                </section>
+                <link rel="stylesheet" href="{{ asset('front/plugins/flex-slider/flexslider.css') }}">
+
+                <script src="{{ asset('front/plugins/flex-slider/jquery.flexslider.js') }}"></script>
+
+                {%endblock%}
+

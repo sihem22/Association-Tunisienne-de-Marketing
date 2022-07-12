@@ -1,0 +1,20 @@
+{%if evlt.civilite=='Mme' %}Chère {%else%}Cher {%endif%}Professeur «{{evlt.nom}}» 
+
+Nous avons le plaisir de vous informer que le 16ème Colloque International de l’ATM se tiendra les 07 et 08 avril 2018 à Hammamet, en Tunisie.
+
+En tant que Président du Comité Scientifique et afin de garantir le succès de cette 16ème édition du colloque, nous vous sollicitons de bien vouloir évaluer le papier intitulé «{{soumission.titrePapier}}»
+
+avant le 15 février 2018 et ce en cliquant sur le lien suivant : 
+
+{{url('front_Succes1',{'id':soumission.id})}}
+
+Pour vous simplifier la tâche, nous vous prions de bien vouloir utiliser la fiche d’évaluation en cliquant sur le lien suivant :
+
+{{url('front_questionnaire',{'soumission':soumission.id})}}
+
+Comptant également sur votre présence les jours du colloque, nous vous remercions, {%if evlt.civilite=='Mme' %}Chère {%else%}Cher {%endif%} collègue, pour votre précieuse collaboration.
+
+ Bien Cordialement.
+ 
+ Président du Comité d'Evaluation de l’ATM
+

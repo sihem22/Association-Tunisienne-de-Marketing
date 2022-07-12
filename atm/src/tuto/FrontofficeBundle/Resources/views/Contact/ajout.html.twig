@@ -1,0 +1,123 @@
+{% extends ":front:Front.html.twig" %}
+{% block title %}Contactez-nous{% endblock  %}
+{% block body %}
+    <section class="wrapper padding50">
+        <div class="container">
+            {{form_start(form,{'attr':{'id':'form2','role':'form'}})}}
+            <style>
+                .required:after { content:" *";
+                                  color:red; }
+                </style>
+
+                <div class="row" style="margin-top: 15px">
+                <div class="col-md-8">
+                    {% for label, flashes in app.session.flashbag.all %}
+                        {% for flash in flashes %}
+                            <div class="alert alert-{{label}}">
+                                <button class="close" data-dismiss="alert">×</button>
+                                <strong>{{ label|title }} !!!</strong> :  {{ flash }}
+
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">          
+                    <div class="row">
+                        <div class="col-md-9">
+
+                            {{ form_row(form.nom,{ 'label': 'Nom:'},{'attr':{'placeholder':'Donnez votre nom  '}}) }}
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-9">
+
+                            {{ form_row(form.prenom,{ 'label': 'Prénom:'},{'attr':{'placeholder':'Donnez votre prénom  '}}) }}
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-9">
+                            {{ form_row(form.email,{ 'label': 'Email:'},{'attr':{'placeholder':'Donnez votre email  '}}) }}
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            {{ form_row(form.commentaire,{'attr':{'placeholder':'Donnez votre commentaire  '}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <div>
+
+                        <button type="submit" class="caption lft button orange glossy slide_btn slide_item_left" value="{{ 'change_password.submit'|trans }}"><h3><font color="white"><b>Envoyer</b></font></h3></button> <b><font color="red">  champ obligatoire *  </font></b>
+                    </div>
+                    <style>
+                        .button.orange {
+                            width: 170px;
+                            height:70px;
+                            background-color: #FF4500;
+
+                        }
+                    </style></div>
+                <div class="row">
+                    {{ form_end(form) }}
+                    <div class="col-md-3">
+                        <h2><b>Contactez-nous</b></h2>
+                        <address class="margin-bottom-40">
+                            <h3>   ADRESSE : </h3>
+                            <br>
+                            <b> Université de Tunis El Manar, Campus Universitaire Farhat Hached<br> B.P. n° 94 - ROMMANA - Tunis<br>1068 Faculté des Sciences Economiques et de Gestion de Tunis,<br> B.P 248 2092,<br></b>
+
+                            <h3>  Tél : </h3> <b>(+216) 71 870 277 </b>
+                            <br>
+                            <h3>  Site Web: </h3>
+
+                            <b><a href="http://www.atm-marketing.tn/"> http://www.atm-marketing.tn/</a> </b>
+                              <h3>Facebook: </h3>
+
+                            <b><a href="https://www.facebook.com/groups/AssociationTunisienneDeMarketing/"> https://www.facebook.com/groups/AssociationTunisienneDeMarketing/</a> </b>
+                        </address>
+                    </div>
+                </div>
+                <hr>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zuiTB_WIy9L1GnMKGeGgu3C87xU" width="1200" height="400"></iframe> 
+            </div>
+
+        </div> 
+
+        <style>
+            textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],  input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+
+
+                font-size: 14px;
+
+                padding: 10px 10px;
+
+                width:  800px ;
+                margin-top: 10px;
+                display: flow-root;}
+            select {
+
+                width: 800px;
+                padding: 15px;
+
+            }
+            label {
+                font-size: 20px;
+                float: left;
+            }
+        </style>
+
+    </section>
+
+
+{%endblock%}
